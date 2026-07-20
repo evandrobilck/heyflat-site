@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
 
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
@@ -17,12 +18,18 @@ export default function ContactSection() {
   return (
     <section id="contato" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
       <div className="mx-auto max-w-xl px-4 text-center md:px-8">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Fale com a gente</h2>
-        <p className="mt-3 text-brand-100">
-          Dúvida, sugestão ou algum problema com a sua casa? Manda uma mensagem — a gente responde rapidinho.
-        </p>
+        <Reveal>
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Fale com a gente</h2>
+          <p className="mt-3 text-brand-100">
+            Dúvida, sugestão ou algum problema com a sua casa? Manda uma mensagem — a gente responde rapidinho.
+          </p>
+        </Reveal>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-4 rounded-2xl bg-white p-8 text-left shadow-xl">
+        <Reveal
+          as="form"
+          delay={0.15}
+          onSubmit={handleSubmit}
+          className="mt-8 space-y-4 rounded-2xl bg-white p-8 text-left shadow-xl">
           <div>
             <label className="text-xs font-medium text-gray-600">Nome</label>
             <input
@@ -63,7 +70,7 @@ export default function ContactSection() {
           <p className="text-center text-xs text-gray-400">
             Isso abre seu app de e-mail com a mensagem pronta pra {CONTACT_EMAIL}.
           </p>
-        </form>
+        </Reveal>
       </div>
     </section>
   )

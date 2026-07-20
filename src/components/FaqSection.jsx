@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const FAQ_ITEMS = [
   {
     question: 'O que é o HeyFlat?',
@@ -32,24 +34,25 @@ const FAQ_ITEMS = [
 export default function FaqSection() {
   return (
     <section id="faq" className="mx-auto max-w-3xl px-4 py-16 md:px-8 md:py-24">
-      <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-        Perguntas frequentes
-      </h2>
+      <Reveal>
+        <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+          Perguntas frequentes
+        </h2>
+      </Reveal>
 
       <div className="mt-10 space-y-3">
-        {FAQ_ITEMS.map(({ question, answer }) => (
-          <details
-            key={question}
-            className="group rounded-xl border border-gray-200 bg-white p-5 open:border-brand-200"
-          >
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-gray-900">
-              {question}
-              <span className="shrink-0 text-lg leading-none text-brand-600 transition-transform group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <p className="mt-3 text-sm text-gray-500">{answer}</p>
-          </details>
+        {FAQ_ITEMS.map(({ question, answer }, index) => (
+          <Reveal key={question} delay={Math.min(index * 0.06, 0.3)} y={16}>
+            <details className="group rounded-xl border border-gray-200 bg-white p-5 open:border-brand-200">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-gray-900">
+                {question}
+                <span className="shrink-0 text-lg leading-none text-brand-600 transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-sm text-gray-500">{answer}</p>
+            </details>
+          </Reveal>
         ))}
       </div>
     </section>

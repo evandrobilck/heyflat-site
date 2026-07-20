@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 const PLAN = {
@@ -18,10 +20,12 @@ export default function PriceSection() {
   return (
     <section id="preco" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Preço</h2>
-        <p className="mt-3 text-brand-100">Um plano só, simples, cobrado por casa — não por morador.</p>
+        <Reveal>
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Preço</h2>
+          <p className="mt-3 text-brand-100">Um plano só, simples, cobrado por casa — não por morador.</p>
+        </Reveal>
 
-        <div className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-8 text-left shadow-xl">
+        <Reveal delay={0.15} className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-8 text-left shadow-xl">
           <p className="text-sm font-semibold text-brand-700">{PLAN.name}</p>
           <p className="mt-2">
             <span className="text-4xl font-extrabold text-gray-900">{PLAN.price}</span>
@@ -49,7 +53,7 @@ export default function PriceSection() {
           <p className="mt-3 text-center text-xs text-gray-400">
             Só quem criou a casa é cobrado. Sem taxa de cartão pros demais moradores.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

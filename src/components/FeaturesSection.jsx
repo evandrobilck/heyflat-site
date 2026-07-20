@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 function BalancePreview() {
@@ -199,44 +201,47 @@ const FEATURES = [
 export default function FeaturesSection() {
   return (
     <section id="recursos" className="mx-auto max-w-5xl px-4 py-16 md:px-8 md:py-24">
-      <div className="text-center">
+      <Reveal className="text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
           Nossos principais recursos
         </h2>
         <p className="mt-3 text-gray-500">Conheça, em detalhes, tudo que a sua casa compartilhada ganha.</p>
-      </div>
+      </Reveal>
 
       <div className="mt-16 space-y-16 md:space-y-24">
-        {FEATURES.map(({ icon, title, description, bullets, preview: Preview }, index) => (
-          <div
-            key={title}
-            className={`flex flex-col items-center gap-8 md:gap-16 ${
-              index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'
-            }`}
-          >
-            <div className="flex flex-1 justify-center">
-              <Preview />
+        {FEATURES.map(({ icon, title, description, bullets, preview: Preview }, index) => {
+          const fromRight = index % 2 === 1
+          return (
+            <div
+              key={title}
+              className={`flex flex-col items-center gap-8 md:gap-16 ${
+                fromRight ? 'md:flex-row-reverse' : 'md:flex-row'
+              }`}
+            >
+              <Reveal className="flex flex-1 justify-center" x={fromRight ? 40 : -40} y={0}>
+                <Preview />
+              </Reveal>
+              <Reveal className="flex-1" x={fromRight ? -40 : 40} y={0} delay={0.1}>
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-2xl">
+                  {icon}
+                </span>
+                <h3 className="mt-4 text-2xl font-bold text-gray-900">{title}</h3>
+                <p className="mt-3 text-gray-600">{description}</p>
+                <ul className="mt-4 space-y-2">
+                  {bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2 text-sm text-gray-600">
+                      <span className="mt-0.5 text-brand-600">✓</span>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
-            <div className="flex-1">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-2xl">
-                {icon}
-              </span>
-              <h3 className="mt-4 text-2xl font-bold text-gray-900">{title}</h3>
-              <p className="mt-3 text-gray-600">{description}</p>
-              <ul className="mt-4 space-y-2">
-                {bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-0.5 text-brand-600">✓</span>
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
-      <div className="mt-20 rounded-2xl border border-brand-100 bg-brand-50/60 p-8 text-center">
+      <Reveal className="mt-20 rounded-2xl border border-brand-100 bg-brand-50/60 p-8 text-center">
         <h3 className="text-xl font-bold text-gray-900">Pronto pra organizar a sua casa?</h3>
         <p className="mt-2 text-sm text-gray-600">30 dias grátis, sem compromisso.</p>
         <a
@@ -245,7 +250,7 @@ export default function FeaturesSection() {
         >
           Criar conta grátis
         </a>
-      </div>
+      </Reveal>
     </section>
   )
 }
