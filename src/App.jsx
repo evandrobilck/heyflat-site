@@ -1,23 +1,24 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import PartnersBar from './components/PartnersBar'
-import LanguagesStrip from './components/LanguagesStrip'
-import FeaturesSection from './components/FeaturesSection'
-import PlansSection from './components/PlansSection'
-import FaqSection from './components/FaqSection'
 import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import FeaturesPage from './pages/FeaturesPage'
+import PlansPage from './pages/PlansPage'
+import ContactPage from './pages/ContactPage'
 
 export default function App() {
   return (
-    <div className="min-h-svh bg-[#fffdf9]">
-      <Header />
-      <Hero />
-      <PartnersBar />
-      <LanguagesStrip />
-      <FeaturesSection />
-      <PlansSection />
-      <FaqSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-svh bg-[#fffdf9]">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/recursos" element={<FeaturesPage />} />
+          <Route path="/planos" element={<PlansPage />} />
+          <Route path="/contato" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }

@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import PhoneMockup from './PhoneMockup'
 
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 export default function Hero() {
   return (
-    <section id="topo" className="mx-auto max-w-6xl px-4 pb-8 pt-12 md:px-8 md:pb-16 md:pt-20">
+    <section className="mx-auto max-w-6xl px-4 pb-8 pt-12 md:px-8 md:pb-16 md:pt-20">
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-8">
         <div>
           <span className="inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
@@ -25,12 +26,12 @@ export default function Hero() {
             >
               Criar conta grátis
             </a>
-            <a
-              href="#recursos"
+            <Link
+              to="/recursos"
               className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 hover:border-gray-400"
             >
               Ver recursos
-            </a>
+            </Link>
           </div>
           <p className="mt-3 text-xs text-gray-400">30 dias grátis · cancele quando quiser</p>
         </div>
