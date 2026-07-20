@@ -16,14 +16,12 @@ const PLAN = {
 
 export default function PriceSection() {
   return (
-    <section id="preco" className="bg-brand-50/40 py-16 md:py-24">
+    <section id="preco" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Preço</h2>
-        <p className="mt-3 text-gray-500">
-          Um plano só, simples, cobrado por casa — não por morador.
-        </p>
+        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Preço</h2>
+        <p className="mt-3 text-brand-100">Um plano só, simples, cobrado por casa — não por morador.</p>
 
-        <div className="mx-auto mt-10 max-w-sm rounded-2xl border border-brand-200 bg-white p-8 text-left shadow-sm">
+        <div className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-8 text-left shadow-xl">
           <p className="text-sm font-semibold text-brand-700">{PLAN.name}</p>
           <p className="mt-2">
             <span className="text-4xl font-extrabold text-gray-900">{PLAN.price}</span>
