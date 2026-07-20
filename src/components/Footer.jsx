@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white py-10">
@@ -9,18 +7,18 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
-          <Link to="/" className="hover:text-brand-600">
+          <a href="#topo" className="hover:text-brand-600">
             Home
-          </Link>
-          <Link to="/recursos" className="hover:text-brand-600">
+          </a>
+          <a href="#recursos" className="hover:text-brand-600">
             Recursos
-          </Link>
-          <Link to="/preco" className="hover:text-brand-600">
+          </a>
+          <a href="#preco" className="hover:text-brand-600">
             Preço
-          </Link>
-          <Link to="/contato" className="hover:text-brand-600">
+          </a>
+          <a href="#contato" className="hover:text-brand-600">
             Contato
-          </Link>
+          </a>
         </nav>
 
         <p className="text-xs text-gray-400">© {new Date().getFullYear()} HeyFlat. Todos os direitos reservados.</p>

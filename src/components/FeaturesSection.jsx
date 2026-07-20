@@ -196,13 +196,13 @@ const FEATURES = [
   },
 ]
 
-export default function FeaturesPage() {
+export default function FeaturesSection() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-16 md:px-8 md:py-24">
+    <section id="recursos" className="mx-auto max-w-5xl px-4 py-16 md:px-8 md:py-24">
       <div className="text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
           Nossos principais recursos
-        </h1>
+        </h2>
         <p className="mt-3 text-gray-500">Conheça, em detalhes, tudo que a sua casa compartilhada ganha.</p>
       </div>
 
@@ -221,7 +221,7 @@ export default function FeaturesPage() {
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-2xl">
                 {icon}
               </span>
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">{title}</h2>
+              <h3 className="mt-4 text-2xl font-bold text-gray-900">{title}</h3>
               <p className="mt-3 text-gray-600">{description}</p>
               <ul className="mt-4 space-y-2">
                 {bullets.map((bullet) => (
@@ -237,7 +237,7 @@ export default function FeaturesPage() {
       </div>
 
       <div className="mt-20 rounded-2xl border border-brand-100 bg-brand-50/60 p-8 text-center">
-        <h2 className="text-xl font-bold text-gray-900">Pronto pra organizar a sua casa?</h2>
+        <h3 className="text-xl font-bold text-gray-900">Pronto pra organizar a sua casa?</h3>
         <p className="mt-2 text-sm text-gray-600">30 dias grátis, sem compromisso.</p>
         <a
           href={SIGNUP_URL}
@@ -246,6 +246,6 @@ export default function FeaturesPage() {
           Criar conta grátis
         </a>
       </div>
-    </div>
+    </section>
   )
 }

@@ -1,33 +1,26 @@
-import { Link, NavLink } from 'react-router-dom'
-
 const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 const NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/recursos', label: 'Recursos' },
-  { to: '/preco', label: 'Preço' },
-  { to: '/contato', label: 'Contato' },
+  { href: '#topo', label: 'Home' },
+  { href: '#recursos', label: 'Recursos' },
+  { href: '#preco', label: 'Preço' },
+  { href: '#contato', label: 'Contato' },
 ]
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
-        <Link to="/" className="flex items-center gap-2">
+        <a href="#topo" className="flex items-center gap-2">
           <img src="/logo-purple.svg" alt="HeyFlat" className="h-7 w-auto" />
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
-          {NAV_LINKS.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={to === '/'}
-              className={({ isActive }) => (isActive ? 'text-brand-600' : 'hover:text-brand-600')}
-            >
+          {NAV_LINKS.map(({ href, label }) => (
+            <a key={href} href={href} className="hover:text-brand-600">
               {label}
-            </NavLink>
+            </a>
           ))}
         </nav>
 

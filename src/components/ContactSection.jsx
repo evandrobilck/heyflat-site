@@ -1,9 +1,9 @@
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
-export default function ContactPage() {
+export default function ContactSection() {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 text-center md:px-8 md:py-24">
-      <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Fale com a gente</h1>
+    <section id="contato" className="mx-auto max-w-2xl px-4 py-16 text-center md:px-8 md:py-24">
+      <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Fale com a gente</h2>
       <p className="mt-3 text-gray-500">
         Dúvida, sugestão ou algum problema com a sua casa? Manda um e-mail — a gente responde rapidinho.
       </p>
@@ -16,6 +16,6 @@ export default function ContactPage() {
       </a>
 
       <p className="mt-6 text-xs text-gray-400">Respondemos em até 2 dias úteis.</p>
-    </div>
+    </section>
   )
 }
