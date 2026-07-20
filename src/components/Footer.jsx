@@ -1,22 +1,22 @@
 const PRODUCT_LINKS = [
-  { href: '#recursos', label: 'Vantagens' },
-  { href: '#preco', label: 'Preços' },
-  { href: '#recursos', label: 'Como funciona' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#recursos', label: 'Vantagens' },
+  { href: '/#preco', label: 'Preços' },
+  { href: '/#recursos', label: 'Como funciona' },
+  { href: '/#faq', label: 'FAQ' },
   { href: '#', label: 'Blog' },
 ]
 
 const LEGAL_LINKS = [
-  { href: '#', label: 'Privacidade' },
-  { href: '#', label: 'Termos' },
-  { href: '#', label: 'Cookies' },
-  { href: '#', label: 'Segurança' },
+  { href: '/privacidade', label: 'Privacidade' },
+  { href: '/termos', label: 'Termos' },
+  { href: '/privacidade#cookies', label: 'Cookies' },
+  { href: '/privacidade#seguranca', label: 'Segurança' },
 ]
 
 const CONNECT_LINKS = [
-  { href: '#contato', label: 'Contato' },
+  { href: '/#contato', label: 'Contato' },
   { href: '#', label: 'Changelog' },
-  { href: '#topo', label: 'Sobre' },
+  { href: '/', label: 'Sobre' },
 ]
 
 const SOCIAL_LINKS = [

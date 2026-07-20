@@ -1,25 +1,22 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import PartnersBar from './components/PartnersBar'
-import LanguagesStrip from './components/LanguagesStrip'
-import FeaturesSection from './components/FeaturesSection'
-import PriceSection from './components/PriceSection'
-import FaqSection from './components/FaqSection'
-import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import LandingPage from './pages/LandingPage'
+import PrivacyPage from './pages/PrivacyPage'
+import TermsPage from './pages/TermsPage'
 
 export default function App() {
   return (
-    <div className="min-h-svh bg-[#fffdf9]">
-      <Header />
-      <Hero />
-      <PartnersBar />
-      <LanguagesStrip />
-      <FeaturesSection />
-      <PriceSection />
-      <FaqSection />
-      <ContactSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-svh bg-[#fffdf9]">
+        <Header />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/privacidade" element={<PrivacyPage />} />
+          <Route path="/termos" element={<TermsPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
