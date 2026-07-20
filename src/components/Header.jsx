@@ -6,7 +6,7 @@ const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/recursos', label: 'Recursos' },
-  { to: '/planos', label: 'Planos' },
+  { to: '/preco', label: 'Preço' },
   { to: '/contato', label: 'Contato' },
 ]
 

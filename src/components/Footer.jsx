@@ -15,8 +15,8 @@ export default function Footer() {
           <Link to="/recursos" className="hover:text-brand-600">
             Recursos
           </Link>
-          <Link to="/planos" className="hover:text-brand-600">
-            Planos
+          <Link to="/preco" className="hover:text-brand-600">
+            Preço
           </Link>
           <Link to="/contato" className="hover:text-brand-600">
             Contato

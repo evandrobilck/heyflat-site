@@ -92,6 +92,23 @@ function DevicesPreview() {
   )
 }
 
+function HousePreview() {
+  const members = ['Evandro', 'Maria', 'João']
+  return (
+    <div className="w-full max-w-xs space-y-2 rounded-xl border border-gray-200 bg-white p-4">
+      <p className="text-xs font-semibold text-gray-900">Pohlman Street</p>
+      {members.map((name) => (
+        <div key={name} className="flex items-center gap-2">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-100 text-[10px] font-semibold text-brand-700">
+            {name[0]}
+          </span>
+          <p className="text-xs text-gray-600">{name}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const FEATURES = [
   {
     icon: '🧾',
@@ -152,6 +169,18 @@ const FEATURES = [
       'Exportação em CSV a qualquer momento',
     ],
     preview: ReportsPreview,
+  },
+  {
+    icon: '🏠',
+    title: 'Dados da casa e moradores',
+    description:
+      'Cadastre o nome, endereço e foto da casa, veja quem mora com você e desde quando, e convide novos moradores com um código ou link. Guarde ainda informações importantes no Cofre da casa — Wi-Fi, PayID e dados bancários — acessíveis só pra quem mora lá.',
+    bullets: [
+      'Convide moradores com um código ou link de convite',
+      'Cofre da casa: Wi-Fi, PayID e outras informações',
+      'Histórico de quem morou e por quanto tempo',
+    ],
+    preview: HousePreview,
   },
   {
     icon: '🌎',

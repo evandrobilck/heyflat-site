@@ -14,11 +14,11 @@ const PLAN = {
   ],
 }
 
-export default function PlansSection() {
+export default function PriceSection() {
   return (
-    <section id="planos" className="bg-brand-50/40 py-16 md:py-24">
+    <section id="preco" className="bg-brand-50/40 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Planos</h2>
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">Preço</h2>
         <p className="mt-3 text-gray-500">
           Um plano só, simples, cobrado por casa — não por morador.
         </p>

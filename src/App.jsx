@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import FeaturesPage from './pages/FeaturesPage'
-import PlansPage from './pages/PlansPage'
+import PricePage from './pages/PricePage'
 import ContactPage from './pages/ContactPage'
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recursos" element={<FeaturesPage />} />
-          <Route path="/planos" element={<PlansPage />} />
+          <Route path="/preco" element={<PricePage />} />
           <Route path="/contato" element={<ContactPage />} />
         </Routes>
         <Footer />
