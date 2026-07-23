@@ -8,10 +8,8 @@ const PLAN = {
   period: '/mês por casa',
   trialDays: 30,
   features: [
-    'Moradores e contas ilimitados',
-    'Contas, tarefas, compras e calendário compartilhados',
-    'Relatórios de gastos da casa',
-    'Suporte por e-mail',
+    'Moradores ilimitados, sem custo extra',
+    '30 dias grátis, sem cartão',
     'Cancele quando quiser',
   ],
 }
@@ -21,8 +19,13 @@ export default function PriceSection() {
     <section id="preco" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Preço</h2>
-          <p className="mt-3 text-brand-100">Um plano só, simples, cobrado por casa — não por morador.</p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+            Um preço por casa. Todos os moradores inclusos.
+          </h2>
+          <p className="mt-3 text-brand-100">
+            Não é por pessoa. É um valor único pela casa inteira — 3, 5 ou 8 moradores, o preço é o
+            mesmo. Uma assinatura, a casa toda com acesso completo.
+          </p>
         </Reveal>
 
         <Reveal delay={0.15} className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-8 text-left shadow-xl">
@@ -48,7 +51,7 @@ export default function PriceSection() {
             href={SIGNUP_URL}
             className="mt-8 block rounded-lg bg-brand-600 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
           >
-            Começar teste grátis
+            Começar os 30 dias grátis
           </a>
           <p className="mt-3 text-center text-xs text-gray-400">
             Só quem criou a casa é cobrado. Sem taxa de cartão pros demais moradores.

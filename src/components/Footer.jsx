@@ -1,14 +1,13 @@
 const PRODUCT_LINKS = [
-  { href: '/#recursos', label: 'Vantagens' },
-  { href: '/#preco', label: 'Preços' },
-  { href: '/#recursos', label: 'Como funciona' },
-  { href: '/#faq', label: 'FAQ' },
-  { href: '#', label: 'Blog' },
+  { href: '/#recursos', label: 'Recursos' },
+  { href: '/#preco', label: 'Preço' },
+  { href: '/#faq', label: 'Perguntas' },
+  { href: '/#contato', label: 'Contato' },
 ]
 
 const LEGAL_LINKS = [
   { href: '/privacidade', label: 'Privacidade' },
-  { href: '/termos', label: 'Termos' },
+  { href: '/termos', label: 'Termos de uso' },
   { href: '/privacidade#cookies', label: 'Cookies' },
   { href: '/privacidade#seguranca', label: 'Segurança' },
 ]
@@ -86,7 +85,7 @@ export default function Footer() {
           <div>
             <img src="/logo-white.svg" alt="HeyFlat" className="h-7 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-gray-400">
-              Sua casa compartilhada, organizada. Contas, tarefas, compras e calendário num só lugar.
+              HeyFlat — Sua casa compartilhada, organizada.
             </p>
           </div>
 
@@ -118,7 +117,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} HeyFlat. Todos os direitos reservados.
+          Feito na Austrália 🇦🇺 · © {new Date().getFullYear()} HeyFlat
         </p>
       </div>
     </footer>

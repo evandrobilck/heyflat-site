@@ -178,10 +178,10 @@ function HousePreview() {
 
 const FEATURES = [
   {
-    icon: '🧾',
-    title: 'Contas divididas',
+    icon: '💰',
+    title: 'Contas',
     description:
-      'Cadastre qualquer conta da casa — aluguel, energia, água, gás, internet, mercado — e divida do jeito que fizer mais sentido pra vocês: igual entre todos, por porcentagem ou valor exato pra cada pessoa. O HeyFlat calcula sozinho o saldo de quem deve o quê pra quem, sem planilha nem grupo de WhatsApp cheio de "quem pagou o quê".',
+      'Aluguel e contas divididos em segundos. Adicione qualquer conta — aluguel, luz, internet, mercado — e o HeyFlat divide automaticamente entre os moradores. Divisão igual, por porcentagem ou valor exato, você escolhe. E o lembrete de vencimento chega pra todo mundo pelo app, não por você.',
     bullets: [
       'Recorrência semanal, quinzenal, mensal ou anual',
       'Categorias personalizadas, além das já prontas',
@@ -191,9 +191,9 @@ const FEATURES = [
   },
   {
     icon: '✅',
-    title: 'Tarefas em rodízio',
+    title: 'Tarefas',
     description:
-      'Cadastre as tarefas da casa, escolha um ou mais responsáveis (ou deixe geral, pra qualquer um assumir) e defina a recorrência. Quem mais colaborar no mês vira o "Morador do Mês" no Hall da Fama — um jeito leve de manter todo mundo fazendo a sua parte, sem parecer cobrança.',
+      'Uma escala que ninguém discute. Louça, lixo, banheiro, faxina. Monte a rotação da casa uma vez e pronto: cada um sabe a sua vez, o app avisa, e a discussão de "eu sempre faço tudo" acaba.',
     bullets: [
       'Marcar como feita por mais de uma pessoa',
       'Recorrência diária, semanal ou mensal',
@@ -203,9 +203,9 @@ const FEATURES = [
   },
   {
     icon: '🛒',
-    title: 'Lista de compras',
+    title: 'Lista de Compras',
     description:
-      'Adicione o que está faltando em casa, e quando alguém for ao mercado, registre a compra com categoria, quem comprou e como o valor é dividido. A compra já vira automaticamente uma conta dividida — sem precisar cadastrar tudo de novo em outro lugar.',
+      'Uma lista só, sempre atualizada. Qualquer morador adiciona, todo mundo vê em tempo real. Quem for ao mercado já sai de casa sabendo o que falta.',
     bullets: [
       'Histórico de tudo que já foi comprado',
       'Edição de itens e compras registradas',
@@ -229,7 +229,7 @@ const FEATURES = [
     icon: '🔔',
     title: 'Lembretes personalizados',
     description:
-      'Configure quantos lembretes quiser pra cada conta ou tarefa — cada um com seu próprio canal (email, notificação push, ou os dois), quantos dias de antecedência e horário, igual um calendário de verdade. Já a lista de compras é ainda mais direta: assim que alguém adiciona um item, todo mundo da casa recebe um aviso na hora.',
+      'Nada mais passa batido. Configure lembretes pro que a sua casa precisa: vencimento de conta, dia do lixo, revisão do aquecedor. A casa toda é avisada na hora certa, automaticamente.',
     bullets: [
       'Vários lembretes por conta ou tarefa, cada um com seu canal',
       'Escolha o dia e o horário de cada aviso',
@@ -239,9 +239,9 @@ const FEATURES = [
   },
   {
     icon: '📊',
-    title: 'Relatórios de gastos',
+    title: 'Expenses',
     description:
-      'Acompanhe quanto a casa gastou por categoria e por mês, compare com o período anterior e exporte tudo em CSV quando precisar prestar contas ou organizar o orçamento da casa.',
+      'Veja pra onde vai o dinheiro da casa. Gráficos claros de quanto a casa gasta por categoria e por mês. Dá pra enxergar onde apertar antes da conta chegar.',
     bullets: [
       'Filtro por período: mês atual, anterior ou últimos 3 meses',
       'Comparativo automático com o período anterior',
@@ -251,12 +251,12 @@ const FEATURES = [
   },
   {
     icon: '🏠',
-    title: 'Dados da casa e moradores',
+    title: 'House',
     description:
-      'Cadastre o nome, endereço e foto da casa, veja quem mora com você e desde quando, e convide novos moradores com um código ou link. Guarde ainda informações importantes no Cofre da casa — Wi-Fi, PayID e dados bancários — acessíveis só pra quem mora lá.',
+      'Tudo que a casa precisa num lugar só. Senha do Wi-Fi, dados da casa, calendário compartilhado e informações importantes sempre à mão. Chega de perguntar "qual mesmo a senha?" toda vez que chega visita.',
     bullets: [
       'Convide moradores com um código ou link de convite',
-      'Cofre da casa: Wi-Fi, PayID e outras informações',
+      'Cofre da casa: Wi-Fi e outras informações importantes',
       'Histórico de quem morou e por quanto tempo',
     ],
     preview: HousePreview,
@@ -265,7 +265,7 @@ const FEATURES = [
     icon: '🔧',
     title: 'Manutenção',
     description:
-      'Registre qualquer problema de manutenção da casa com foto e descrição, e acompanhe até ser resolvido — sem perder o fio no meio de mensagens no grupo. Todo mundo da casa vê o status de cada chamado, do primeiro relato até a solução.',
+      'Manutenção sob controle. Registre o que quebrou, o que já foi consertado e o que ainda está pendente. Todo mundo acompanha o status — sem aquele "achei que alguém já tinha ligado pro proprietário".',
     bullets: [
       'Fotos e descrição em cada problema registrado',
       'Acompanhamento de status até a resolução',
@@ -275,9 +275,9 @@ const FEATURES = [
   },
   {
     icon: '📋',
-    title: 'Inspeções de entrada e saída',
+    title: 'Inspeções',
     description:
-      'Rode um checklist completo de inspeção, item por item, sempre que um morador entrar ou sair da casa. Fica registrado exatamente o estado de cada coisa, pra ninguém discutir depois o que já estava quebrado antes.',
+      'Inspeção sem correria. Marque a data da inspeção e organize o que precisa estar pronto antes dela. A casa se prepara junto, com antecedência, em vez de virar noite arrumando tudo na véspera.',
     bullets: [
       'Checklist configurável, item por item',
       'Use na entrada e na saída de moradores',

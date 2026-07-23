@@ -2,32 +2,36 @@ import Reveal from './Reveal'
 
 const FAQ_ITEMS = [
   {
-    question: 'O que é o HeyFlat?',
+    question: 'O preço é por pessoa ou por casa?',
     answer:
-      'É um app pra organizar a vida de casas compartilhadas: contas divididas, tarefas em rodízio, lista de compras e um calendário unificado de tudo isso, num só lugar.',
+      'Por casa, sempre. São AU$15 por mês pela casa inteira, independente de quantos moradores vocês são. Uma pessoa assina e todo mundo tem acesso completo.',
   },
   {
-    question: 'Preciso pagar pra usar?',
+    question: 'Se entrar mais um morador, o preço sobe?',
+    answer: 'Não. Moradores ilimitados, sempre AU$15 por casa.',
+  },
+  {
+    question: 'O app processa os pagamentos entre a gente?',
     answer:
-      'Só quem cria a casa assina o plano (com 30 dias grátis pra testar). Os demais moradores entram de graça com o código de convite da casa.',
+      'Não. O HeyFlat calcula, organiza e avisa quem deve o quê — o pagamento em si vocês fazem como já fazem hoje, por transferência entre vocês. Depois é só marcar como pago no app.',
   },
   {
-    question: 'Como funciona a divisão de contas?',
+    question: 'E se alguém sair da casa no meio do mês?',
     answer:
-      'Você cadastra a conta, escolhe entre os moradores quem participa e como divide (igual, por porcentagem ou valor exato). O app calcula sozinho quem deve o quê pra quem.',
+      'O HeyFlat mantém o histórico de moradores e faz o cálculo proporcional das contas do período em que a pessoa morou aí.',
   },
   {
-    question: 'Posso usar o HeyFlat no celular e no computador?',
+    question: 'Funciona em português?',
+    answer: 'Sim — português, inglês e espanhol. Cada morador escolhe o idioma dele, na mesma casa.',
+  },
+  {
+    question: 'Preciso de cartão pra testar?',
+    answer: 'Não. São 30 dias completos, com a casa toda, sem cadastrar cartão.',
+  },
+  {
+    question: 'Serve pra qualquer tipo de casa?',
     answer:
-      'Sim — hoje o HeyFlat já funciona direto do navegador, no computador ou no celular, com a mesma conta. Apps nativos para iOS e Android estão a caminho.',
-  },
-  {
-    question: 'O HeyFlat vende meus dados pra terceiros?',
-    answer: 'Não. Seus dados são usados só pra fazer o app funcionar pra você e sua casa.',
-  },
-  {
-    question: 'Posso cancelar a assinatura a qualquer momento?',
-    answer: 'Sim, sem multa e sem burocracia — cancela quando quiser direto pelas configurações da casa.',
+      'Serve. Foi pensado pra share house, mas funciona igual pra república, casal dividindo despesas ou família organizando a rotina.',
   },
 ]
 

@@ -2,10 +2,10 @@ const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 const NAV_LINKS = [
-  { href: '/', label: 'Home' },
+  { href: '/#como-funciona', label: 'Como funciona' },
   { href: '/#recursos', label: 'Recursos' },
   { href: '/#preco', label: 'Preço' },
-  { href: '/#contato', label: 'Contato' },
+  { href: '/#faq', label: 'Perguntas' },
 ]
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
             href={SIGNUP_URL}
             className="rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 md:px-4"
           >
-            Criar conta
+            Começar grátis
           </a>
         </div>
       </div>

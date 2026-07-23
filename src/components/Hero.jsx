@@ -14,11 +14,11 @@ export default function Hero() {
               Feito pra quem mora dividido
             </span>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl">
-              Sua casa compartilhada, <span className="text-brand-600">organizada</span>.
+              Sua casa compartilhada, <span className="text-brand-600">resolvida</span>.
             </h1>
             <p className="mt-4 max-w-md text-lg text-gray-600">
-              Contas, tarefas, compras e calendário da república ou apartamento dividido — tudo num
-              só lugar, dividido de forma justa entre os moradores.
+              Contas, tarefas, compras e avisos — tudo num app só, dividido de forma justa entre os
+              moradores. Você para de ser o chato que cobra todo mundo.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -26,7 +26,7 @@ export default function Hero() {
                 href={SIGNUP_URL}
                 className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
               >
-                Criar conta grátis
+                Começar grátis por 30 dias
               </a>
               <a
                 href="#recursos"
@@ -35,7 +35,12 @@ export default function Hero() {
                 Ver recursos
               </a>
             </div>
-            <p className="mt-3 text-xs text-gray-400">30 dias grátis · cancele quando quiser</p>
+            <p className="mt-3 text-xs text-gray-400">
+              Sem cartão. Um plano por casa, todos os moradores inclusos.
+            </p>
+            <p className="mt-4 text-xs font-medium text-gray-500">
+              Português, English e Español · Moradores ilimitados · Feito na Austrália
+            </p>
           </div>
         </Reveal>
 
