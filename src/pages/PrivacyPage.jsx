@@ -81,8 +81,7 @@ export default function PrivacyPage() {
           <li>If you're an admin, permanently delete all of a house's data, or delete the house entirely.</li>
         </ul>
         <p>
-          For any other request about your data — like exporting or deleting your user account —
-          write to{' '}
+          For any other request about your data — like exporting your information — write to{' '}
           <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-600 hover:underline">
             {CONTACT_EMAIL}
           </a>
@@ -90,7 +89,30 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection id="mudancas" title="7. Changes to this policy">
+      <LegalSection id="exclusao" title="7. Requesting account deletion">
+        <p>
+          To request deletion of your HeyFlat account and personal data, email{' '}
+          <a href={`mailto:${CONTACT_EMAIL}?subject=Account%20deletion%20request`} className="text-brand-600 hover:underline">
+            {CONTACT_EMAIL}
+          </a>{' '}
+          from the address registered on your account, asking us to delete it. We'll confirm and
+          process the request within 30 days.
+        </p>
+        <p>Once processed:</p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li><strong>Deleted:</strong> your name, email, password, profile photo, and phone number.</li>
+          <li>
+            <strong>Retained:</strong> bills, chores, shopping items and other house records you
+            created stay visible to your former roommates, since that data is shared and co-owned
+            by the whole house — the same way it would if you simply left the house from inside
+            the app. If you were the sole member or the house's admin, you can instead delete the
+            entire house yourself from the House tab, which removes all of it, including your own
+            records.
+          </li>
+        </ul>
+      </LegalSection>
+
+      <LegalSection id="mudancas" title="8. Changes to this policy">
         <p>
           If we make a material update to this policy, we'll let you know by email or with a
           notice inside the app before the change takes effect.
