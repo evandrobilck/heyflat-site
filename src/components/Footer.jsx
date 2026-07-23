@@ -22,6 +22,8 @@ const SOCIAL_LINKS = [
   { href: '#', label: 'X (Twitter)', icon: 'x' },
   { href: '#', label: 'Instagram', icon: 'instagram' },
   { href: '#', label: 'LinkedIn', icon: 'linkedin' },
+  { href: '#', label: 'TikTok', icon: 'tiktok' },
+  { href: '#', label: 'Facebook', icon: 'facebook' },
 ]
 
 function SocialIcon({ icon }) {
@@ -38,6 +40,20 @@ function SocialIcon({ icon }) {
         <rect x="3" y="3" width="18" height="18" rx="5" />
         <circle cx="12" cy="12" r="4" />
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    )
+  }
+  if (icon === 'tiktok') {
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+        <path d="M16.5 3c.4 1.9 1.6 3.2 3.5 3.4v2.7c-1.3 0-2.5-.4-3.5-1.1v6.6c0 3-2.4 5.4-5.4 5.4S5.7 17.6 5.7 14.6c0-2.8 2.1-5.1 4.8-5.4v2.8c-1.2.3-2 1.3-2 2.6 0 1.5 1.2 2.7 2.7 2.7s2.7-1.2 2.7-2.7V3h2.6Z" />
+      </svg>
+    )
+  }
+  if (icon === 'facebook') {
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+        <path d="M15 8.5h2V5.3c-.5-.1-1.4-.2-2.3-.2-2.3 0-3.9 1.4-3.9 4v2H8.5v3H10.8v7h3v-7h2.3l.4-3H13.8v-1.7c0-.9.3-1.3 1.2-1.3Z" />
       </svg>
     )
   }

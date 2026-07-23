@@ -37,8 +37,10 @@ export default function ProblemSection() {
         ))}
       </div>
 
-      <Reveal delay={0.3} className="mt-10 text-center">
-        <p className="text-lg font-semibold text-brand-700">O HeyFlat resolve os quatro.</p>
+      <Reveal delay={0.3} className="mt-14 text-center">
+        <p className="text-2xl font-extrabold tracking-tight text-brand-700 md:text-3xl">
+          O HeyFlat resolve os quatro.
+        </p>
       </Reveal>
     </section>
   )

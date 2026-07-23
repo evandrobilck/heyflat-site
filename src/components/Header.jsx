@@ -2,6 +2,7 @@ const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 const NAV_LINKS = [
+  { href: '/', label: 'Início' },
   { href: '/#como-funciona', label: 'Como funciona' },
   { href: '/#recursos', label: 'Recursos' },
   { href: '/#preco', label: 'Preço' },

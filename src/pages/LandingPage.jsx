@@ -1,6 +1,5 @@
 import Hero from '../components/Hero'
 import ProblemSection from '../components/ProblemSection'
-import PartnersBar from '../components/PartnersBar'
 import LanguagesStrip from '../components/LanguagesStrip'
 import FeaturesSection from '../components/FeaturesSection'
 import RoommateOfMonthSection from '../components/RoommateOfMonthSection'
@@ -16,7 +15,6 @@ export default function LandingPage() {
     <>
       <Hero />
       <ProblemSection />
-      <PartnersBar />
       <LanguagesStrip />
       <FeaturesSection />
       <RoommateOfMonthSection />
