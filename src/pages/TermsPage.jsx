@@ -7,81 +7,79 @@ export default function TermsPage() {
   return (
     <>
       <Seo
-        title="Termos de Uso — HeyFlat"
-        description="Termos de uso do HeyFlat: como funciona a assinatura por casa, cancelamento e responsabilidades ao usar o app."
+        title="Terms of Use — HeyFlat"
+        description="HeyFlat's terms of use: how the per-house subscription works, cancellation, and your responsibilities when using the app."
         path="/termos"
       />
-      <LegalLayout title="Termos de Uso" updatedAt="20 de julho de 2026">
+      <LegalLayout title="Terms of Use" updatedAt="July 20, 2026">
       <p className="text-sm leading-relaxed">
-        Ao criar uma conta ou usar o HeyFlat, você concorda com estes termos. Leia com calma — e
-        se tiver dúvida, é só chamar a gente em{' '}
+        By creating an account or using HeyFlat, you agree to these terms. Take your time reading
+        them — and if you have a question, just reach out at{' '}
         <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-600 hover:underline">
           {CONTACT_EMAIL}
         </a>
         .
       </p>
 
-      <LegalSection id="servico" title="1. O que é o HeyFlat">
+      <LegalSection id="servico" title="1. What HeyFlat is">
         <p>
-          O HeyFlat é uma ferramenta de organização para casas compartilhadas: divisão de contas,
-          tarefas, lista de compras e calendário entre moradores. O HeyFlat calcula e registra
-          quem deve o quê para quem dentro da casa, mas não processa nem intermedia esses
-          pagamentos entre moradores — o acerto de contas entre vocês acontece fora do app.
+          HeyFlat is an organization tool for shared houses: splitting bills, chores, a shopping
+          list and a calendar between roommates. HeyFlat calculates and records who owes what to
+          whom within the house, but it does not process or intermediate those payments between
+          roommates — settling up happens outside the app.
         </p>
       </LegalSection>
 
-      <LegalSection id="conta" title="2. Conta, casas e assinatura">
+      <LegalSection id="conta" title="2. Account, houses and subscription">
         <ul className="list-disc space-y-1 pl-5">
-          <li>Você precisa de uma conta válida (com e-mail verificado) para usar o HeyFlat.</li>
-          <li>Cada casa é administrada por quem a criou (ou por quem recebeu o cargo de admin), e é cobrada uma assinatura mensal por casa — não por morador.</li>
-          <li>Toda assinatura nova começa com um período de teste gratuito; você só é cobrado depois que esse período termina, caso não cancele antes.</li>
-          <li>Você pode cancelar a assinatura a qualquer momento direto nas configurações da casa, sem multa.</li>
+          <li>You need a valid account (with a verified email) to use HeyFlat.</li>
+          <li>Each house is managed by whoever created it (or whoever was given the admin role), and is charged one monthly subscription per house — not per roommate.</li>
+          <li>Every new subscription starts with a free trial period; you're only charged once that period ends, if you haven't cancelled.</li>
+          <li>You can cancel the subscription at any time, directly in the house settings, with no penalty.</li>
         </ul>
       </LegalSection>
 
-      <LegalSection id="uso-aceitavel" title="3. Uso aceitável">
-        <p>Ao usar o HeyFlat, você concorda em não:</p>
+      <LegalSection id="uso-aceitavel" title="3. Acceptable use">
+        <p>By using HeyFlat, you agree not to:</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li>Usar o app para atividades ilegais ou fraudulentas.</li>
-          <li>Tentar acessar dados de uma casa da qual você não faz parte.</li>
-          <li>Tentar interferir no funcionamento normal do serviço (ex: sobrecarregar, invadir ou fazer engenharia reversa do sistema).</li>
+          <li>Use the app for illegal or fraudulent activity.</li>
+          <li>Try to access data from a house you're not a member of.</li>
+          <li>Try to interfere with the normal operation of the service (e.g. overloading, breaching, or reverse-engineering the system).</li>
         </ul>
       </LegalSection>
 
-      <LegalSection id="dados-da-casa" title="4. Seus dados e conteúdo">
+      <LegalSection id="dados-da-casa" title="4. Your data and content">
         <p>
-          As informações que você e seus moradores cadastram (contas, tarefas, itens do Cofre,
-          etc.) continuam sendo de vocês. O HeyFlat só as usa para operar o serviço, conforme
-          descrito na nossa{' '}
+          The information you and your roommates enter (bills, chores, Vault items, etc.) remains
+          yours. HeyFlat only uses it to operate the service, as described in our{' '}
           <a href="/privacidade" className="text-brand-600 hover:underline">
-            Política de Privacidade
+            Privacy Policy
           </a>
           .
         </p>
       </LegalSection>
 
-      <LegalSection id="cancelamento" title="5. Cancelamento e encerramento">
+      <LegalSection id="cancelamento" title="5. Cancellation and termination">
         <p>
-          Você pode sair de uma casa, apagar os dados da casa ou deletar a casa inteira a qualquer
-          momento, direto no app (ações de admin são permanentes e não podem ser desfeitas). O
-          HeyFlat pode suspender ou encerrar contas que violem estes termos.
+          You can leave a house, delete a house's data, or delete the whole house at any time,
+          directly in the app (admin actions are permanent and cannot be undone). HeyFlat may
+          suspend or terminate accounts that violate these terms.
         </p>
       </LegalSection>
 
-      <LegalSection id="responsabilidade" title="6. Limitação de responsabilidade">
+      <LegalSection id="responsabilidade" title="6. Limitation of liability">
         <p>
-          O HeyFlat é fornecido "como está". Fazemos o possível para manter os cálculos de divisão
-          de contas e os dados da sua casa corretos e disponíveis, mas não garantimos operação
-          ininterrupta nem nos responsabilizamos por decisões financeiras tomadas com base nos
-          dados do app — a divisão registrada é um acordo entre os moradores, não uma transação
-          financeira intermediada por nós.
+          HeyFlat is provided "as is." We do our best to keep bill-splitting calculations and your
+          house's data accurate and available, but we don't guarantee uninterrupted operation and
+          we're not liable for financial decisions made based on the app's data — the split
+          recorded is an agreement between roommates, not a financial transaction we intermediate.
         </p>
       </LegalSection>
 
-      <LegalSection id="alteracoes" title="7. Alterações nestes termos">
+      <LegalSection id="alteracoes" title="7. Changes to these terms">
         <p>
-          Podemos atualizar estes termos conforme o HeyFlat evolui. Mudanças relevantes serão
-          avisadas por e-mail ou dentro do app antes de entrarem em vigor.
+          We may update these terms as HeyFlat evolves. Material changes will be announced by
+          email or inside the app before they take effect.
         </p>
       </LegalSection>
     </LegalLayout>

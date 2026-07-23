@@ -36,7 +36,7 @@ export default function App() {
           <Route
             path="/privacidade"
             element={
-              <LocaleLayout locale="pt">
+              <LocaleLayout locale="en">
                 <PrivacyPage />
               </LocaleLayout>
             }
@@ -44,7 +44,7 @@ export default function App() {
           <Route
             path="/termos"
             element={
-              <LocaleLayout locale="pt">
+              <LocaleLayout locale="en">
                 <TermsPage />
               </LocaleLayout>
             }

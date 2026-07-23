@@ -7,84 +7,82 @@ export default function PrivacyPage() {
   return (
     <>
       <Seo
-        title="Política de Privacidade — HeyFlat"
-        description="Veja quais dados o HeyFlat coleta, para que são usados e quais escolhas você tem sobre suas informações."
+        title="Privacy Policy — HeyFlat"
+        description="See what data HeyFlat collects, what it's used for, and what choices you have over your information."
         path="/privacidade"
       />
-      <LegalLayout title="Política de Privacidade" updatedAt="20 de julho de 2026">
+      <LegalLayout title="Privacy Policy" updatedAt="July 20, 2026">
       <p className="text-sm leading-relaxed">
-        Esta política explica quais dados o HeyFlat coleta, para que eles são usados e quais
-        escolhas você tem sobre eles. Falamos de forma direta, sem economês — se algo não estiver
-        claro, escreva pra gente em{' '}
+        This policy explains what data HeyFlat collects, what it's used for, and what choices you
+        have over it. We keep it plain, no legalese — if anything isn't clear, write to us at{' '}
         <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-600 hover:underline">
           {CONTACT_EMAIL}
         </a>
         .
       </p>
 
-      <LegalSection id="coleta" title="1. Quais dados coletamos">
-        <p>Coletamos apenas o necessário pra fazer o HeyFlat funcionar pra você e sua casa:</p>
+      <LegalSection id="coleta" title="1. What data we collect">
+        <p>We only collect what's needed to make HeyFlat work for you and your house:</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li>Dados de cadastro: nome, e-mail e senha (usada apenas para autenticação, nunca vemos a senha em texto puro).</li>
-          <li>Dados de perfil opcionais: foto, telefone e informações de pagamento (ex: PayID) que você mesmo cadastra.</li>
-          <li>Dados da casa: endereço, moradores, contas, tarefas, compras e itens do Cofre da casa que você e seus moradores cadastram.</li>
-          <li>Dados de uso técnico: informações básicas de sessão para manter você logado com segurança.</li>
-          <li>Dados de cobrança: quando a assinatura da casa estiver ativa, o processamento do pagamento é feito por um provedor terceirizado (ex: Stripe) — o HeyFlat não armazena o número do seu cartão.</li>
+          <li>Account data: name, email and password (used only for authentication — we never see your password in plain text).</li>
+          <li>Optional profile data: photo, phone number and payment information (e.g. PayID) that you enter yourself.</li>
+          <li>House data: address, roommates, bills, chores, shopping items and House Vault entries that you and your roommates add.</li>
+          <li>Basic technical/session data needed to keep you securely logged in.</li>
+          <li>Billing data: once a house subscription is active, payment is processed by a third-party provider (e.g. Stripe) — HeyFlat never stores your card number.</li>
         </ul>
       </LegalSection>
 
-      <LegalSection id="uso" title="2. Como usamos esses dados">
+      <LegalSection id="uso" title="2. How we use this data">
         <ul className="list-disc space-y-1 pl-5">
-          <li>Fazer o app funcionar: dividir contas, organizar tarefas, mostrar o calendário e os relatórios da sua casa.</li>
-          <li>Autenticar seu login e manter sua conta segura.</li>
-          <li>Enviar notificações que você ativou (ex: lembrete de conta ou tarefa no dia do vencimento).</li>
-          <li>Processar a cobrança da assinatura da casa, quando aplicável.</li>
-          <li>Dar suporte quando você entra em contato com a gente.</li>
+          <li>Making the app work: splitting bills, organizing chores, and showing your house's calendar and reports.</li>
+          <li>Authenticating your login and keeping your account secure.</li>
+          <li>Sending notifications you've turned on (e.g. a bill or chore reminder on its due date).</li>
+          <li>Processing the house subscription charge, when applicable.</li>
+          <li>Providing support when you reach out to us.</li>
         </ul>
       </LegalSection>
 
-      <LegalSection id="compartilhamento" title="3. Compartilhamento com terceiros">
+      <LegalSection id="compartilhamento" title="3. Sharing with third parties">
         <p>
-          Nós não vendemos seus dados. Eles só são compartilhados com prestadores de serviço
-          estritamente necessários para o HeyFlat funcionar — hoje, isso é o Supabase (banco de
-          dados e autenticação) e, quando a assinatura estiver ativa, um processador de pagamentos
-          como o Stripe. Cada um desses parceiros só recebe o dado mínimo necessário pra prestar o
-          serviço dele.
+          We don't sell your data. It's only shared with service providers strictly necessary for
+          HeyFlat to work — today that's Supabase (database and authentication) and, once a
+          subscription is active, a payment processor like Stripe. Each of these partners only
+          receives the minimum data needed to provide its service.
         </p>
         <p>
-          Dentro da sua casa, seus dados de contas, tarefas e compras são visíveis pelos outros
-          moradores — afinal, é uma ferramenta compartilhada. Informações do Cofre da casa (Wi-Fi,
-          PayID, dados bancários) também ficam visíveis só para quem mora na casa.
-        </p>
-      </LegalSection>
-
-      <LegalSection id="cookies" title="4. Cookies e armazenamento local">
-        <p>
-          Usamos apenas o armazenamento local do navegador (localStorage) necessário para manter
-          sua sessão logada entre visitas. Não usamos cookies de rastreamento publicitário nem
-          vendemos dados de navegação para terceiros.
+          Within your house, your bills, chores and shopping data are visible to your other
+          roommates — it's a shared tool, after all. House Vault information (Wi-Fi, PayID, bank
+          details) is likewise visible only to people who live in that house.
         </p>
       </LegalSection>
 
-      <LegalSection id="seguranca" title="5. Segurança">
+      <LegalSection id="cookies" title="4. Cookies and local storage">
         <p>
-          Seus dados ficam hospedados com criptografia em trânsito e em repouso pelo nosso
-          provedor de banco de dados. O acesso aos dados da sua casa é restrito a você e aos
-          moradores dela — administradores da casa têm permissões extras (como remover moradores
-          ou apagar dados), mas apenas dentro da própria casa.
+          We only use the browser's local storage (localStorage) needed to keep you logged in
+          between visits. We don't use advertising tracking cookies or sell browsing data to third
+          parties.
         </p>
       </LegalSection>
 
-      <LegalSection id="direitos" title="6. Seus direitos e controle sobre os dados">
-        <p>Você tem controle direto sobre boa parte dos seus dados, direto no app:</p>
+      <LegalSection id="seguranca" title="5. Security">
+        <p>
+          Your data is hosted with encryption in transit and at rest by our database provider.
+          Access to your house's data is restricted to you and your roommates — house admins have
+          extra permissions (like removing roommates or deleting data), but only within their own
+          house.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="direitos" title="6. Your rights and control over your data">
+        <p>You have direct control over most of your data, right in the app:</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li>Editar seu perfil e informações de pagamento a qualquer momento.</li>
-          <li>Sair de uma casa quando quiser.</li>
-          <li>Se for admin, apagar todos os dados da casa ou deletar a casa inteira, permanentemente.</li>
+          <li>Edit your profile and payment information at any time.</li>
+          <li>Leave a house whenever you want.</li>
+          <li>If you're an admin, permanently delete all of a house's data, or delete the house entirely.</li>
         </ul>
         <p>
-          Pra qualquer outra solicitação sobre seus dados — como exportação ou exclusão da sua
-          conta de usuário — escreva pra{' '}
+          For any other request about your data — like exporting or deleting your user account —
+          write to{' '}
           <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-600 hover:underline">
             {CONTACT_EMAIL}
           </a>
@@ -92,10 +90,10 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection id="mudancas" title="7. Mudanças nesta política">
+      <LegalSection id="mudancas" title="7. Changes to this policy">
         <p>
-          Se atualizarmos esta política de forma relevante, vamos avisar por e-mail ou por um
-          aviso dentro do app antes da mudança valer.
+          If we make a material update to this policy, we'll let you know by email or with a
+          notice inside the app before the change takes effect.
         </p>
       </LegalSection>
     </LegalLayout>
