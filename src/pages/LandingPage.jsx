@@ -11,14 +11,25 @@ import FaqSection from '../components/FaqSection'
 import FinalCtaSection from '../components/FinalCtaSection'
 import ContactSection from '../components/ContactSection'
 import StickyMobileCta from '../components/StickyMobileCta'
+import { useLocale, localeHome } from '../i18n/LocaleContext'
+
+const ALTERNATES = [
+  { lang: 'en', path: localeHome('en') },
+  { lang: 'pt', path: localeHome('pt') },
+  { lang: 'es', path: localeHome('es') },
+  { lang: 'x-default', path: localeHome('en') },
+]
 
 export default function LandingPage() {
+  const { dict, locale } = useLocale()
+
   return (
     <>
       <Seo
-        title="HeyFlat — Sua casa compartilhada, organizada"
-        description="Divida contas, organize tarefas e cuide da sua casa compartilhada num app só. AU$15/mês por casa, moradores ilimitados. Grátis por 30 dias."
-        path="/"
+        title={dict.seo.title}
+        description={dict.seo.description}
+        path={localeHome(locale)}
+        alternates={ALTERNATES}
       />
       <div className="pb-20 md:pb-0">
         <Hero />

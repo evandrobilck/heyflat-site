@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://heyflat.com.au/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/" />
+  </url>
+  <url>
+    <loc>https://heyflat.com.au/pt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/" />
+  </url>
+  <url>
+    <loc>https://heyflat.com.au/es</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/" />
   </url>
   <url>
     <loc>https://heyflat.com.au/privacidade</loc>

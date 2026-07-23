@@ -1,42 +1,63 @@
+import { useLocale, localeHome, LOCALES } from '../i18n/LocaleContext'
+
 const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
-const NAV_LINKS = [
-  { href: '/', label: 'Início' },
-  { href: '/#como-funciona', label: 'Como funciona' },
-  { href: '/#recursos', label: 'Recursos' },
-  { href: '/#preco', label: 'Preço' },
-  { href: '/#faq', label: 'Perguntas' },
-]
+const LANG_FLAGS = { en: '🇺🇸', pt: '🇧🇷', es: '🇪🇸' }
 
 export default function Header() {
+  const { locale, dict, href } = useLocale()
+  const { nav } = dict.header
+
+  const NAV_LINKS = [
+    { href: href(), label: nav.home },
+    { href: href('como-funciona'), label: nav.howItWorks },
+    { href: href('recursos'), label: nav.features },
+    { href: href('preco'), label: nav.price },
+    { href: href('faq'), label: nav.faq },
+  ]
+
   return (
     <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
-        <a href="/" className="flex items-center gap-2">
+        <a href={localeHome(locale)} className="flex items-center gap-2">
           <img src="/logo-purple.svg" alt="HeyFlat" className="h-10 w-auto md:h-11" />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
-          {NAV_LINKS.map(({ href, label }) => (
-            <a key={href} href={href} className="hover:text-brand-600">
+          {NAV_LINKS.map(({ href: linkHref, label }) => (
+            <a key={linkHref} href={linkHref} className="hover:text-brand-600">
               {label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-1 md:gap-3">
+          <div className="flex items-center gap-1 rounded-lg border border-gray-200 p-1">
+            {LOCALES.map((code) => (
+              <a
+                key={code}
+                href={localeHome(code)}
+                aria-label={code}
+                className={`flex h-7 w-7 items-center justify-center rounded text-sm ${
+                  code === locale ? 'bg-brand-50 ring-1 ring-brand-200' : 'opacity-50 hover:opacity-100'
+                }`}
+              >
+                {LANG_FLAGS[code]}
+              </a>
+            ))}
+          </div>
           <a
             href={LOGIN_URL}
             className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:text-brand-600 md:px-4"
           >
-            Login
+            {dict.header.login}
           </a>
           <a
             href={SIGNUP_URL}
             className="rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 md:px-4"
           >
-            Começar grátis
+            {dict.header.cta}
           </a>
         </div>
       </div>

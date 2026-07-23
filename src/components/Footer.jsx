@@ -1,22 +1,4 @@
-const PRODUCT_LINKS = [
-  { href: '/#recursos', label: 'Recursos' },
-  { href: '/#preco', label: 'Preço' },
-  { href: '/#faq', label: 'Perguntas' },
-  { href: '/#contato', label: 'Contato' },
-]
-
-const LEGAL_LINKS = [
-  { href: '/privacidade', label: 'Privacidade' },
-  { href: '/termos', label: 'Termos de uso' },
-  { href: '/privacidade#cookies', label: 'Cookies' },
-  { href: '/privacidade#seguranca', label: 'Segurança' },
-]
-
-const CONNECT_LINKS = [
-  { href: '/#contato', label: 'Contato' },
-  { href: '#', label: 'Changelog' },
-  { href: '/', label: 'Sobre' },
-]
+import { useLocale, localeHome } from '../i18n/LocaleContext'
 
 const SOCIAL_LINKS = [
   { href: '#', label: 'X (Twitter)', icon: 'x' },
@@ -94,32 +76,51 @@ function StoreBadge({ label, sublabel, icon }) {
 }
 
 export default function Footer() {
+  const { locale, dict, href } = useLocale()
+  const t = dict.footer
+
+  const productLinks = [
+    { href: href('recursos'), label: t.productLinks[0] },
+    { href: href('preco'), label: t.productLinks[1] },
+    { href: href('faq'), label: t.productLinks[2] },
+    { href: href('contato'), label: t.productLinks[3] },
+  ]
+  const legalLinks = [
+    { href: '/privacidade', label: t.legalLinks[0] },
+    { href: '/termos', label: t.legalLinks[1] },
+    { href: '/privacidade#cookies', label: t.legalLinks[2] },
+    { href: '/privacidade#seguranca', label: t.legalLinks[3] },
+  ]
+  const connectLinks = [
+    { href: href('contato'), label: t.connectLinks[0] },
+    { href: '#', label: t.connectLinks[1] },
+    { href: localeHome(locale), label: t.connectLinks[2] },
+  ]
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-8">
         <div className="flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-12 md:flex-row md:items-center">
           <div>
             <img src="/logo-white.svg" alt="HeyFlat" className="h-7 w-auto" />
-            <p className="mt-3 max-w-xs text-sm text-gray-400">
-              HeyFlat — Sua casa compartilhada, organizada.
-            </p>
+            <p className="mt-3 max-w-xs text-sm text-gray-400">{t.tagline}</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <StoreBadge icon="🍎" sublabel="Em breve na" label="App Store" />
-            <StoreBadge icon="▶" sublabel="Em breve no" label="Google Play" />
+            <StoreBadge icon="🍎" sublabel={t.storeBadges.comingSoon} label={t.storeBadges.appStore} />
+            <StoreBadge icon="▶" sublabel={t.storeBadges.comingSoon} label={t.storeBadges.googlePlay} />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-10 pt-12 sm:grid-cols-4">
-          <FooterColumn title="Produto" links={PRODUCT_LINKS} />
+          <FooterColumn title={t.columns.product} links={productLinks} />
           <div>
-            <p className="text-sm font-semibold text-white">Siga-nos</p>
+            <p className="text-sm font-semibold text-white">{t.columns.follow}</p>
             <div className="mt-4 flex gap-2">
-              {SOCIAL_LINKS.map(({ href, label, icon }) => (
+              {SOCIAL_LINKS.map(({ href: socialHref, label, icon }) => (
                 <a
                   key={label}
-                  href={href}
+                  href={socialHref}
                   aria-label={label}
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
                 >
@@ -128,12 +129,12 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <FooterColumn title="Legal" links={LEGAL_LINKS} />
-          <FooterColumn title="Conectar" links={CONNECT_LINKS} />
+          <FooterColumn title={t.columns.legal} links={legalLinks} />
+          <FooterColumn title={t.columns.connect} links={connectLinks} />
         </div>
 
         <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-gray-500">
-          Feito na Austrália 🇦🇺 · © {new Date().getFullYear()} HeyFlat
+          {t.copyright.replace('{year}', new Date().getFullYear())}
         </p>
       </div>
     </footer>

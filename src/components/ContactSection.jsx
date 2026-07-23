@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
+import { useLocale } from '../i18n/LocaleContext'
 
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
 export default function ContactSection() {
+  const { dict } = useLocale()
+  const t = dict.contact
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
   function handleSubmit(event) {
     event.preventDefault()
-    const subject = encodeURIComponent(`Fale com a gente — ${name || 'Site HeyFlat'}`)
-    const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\n${message}`)
+    const subject = encodeURIComponent(`${t.mailSubject} — ${name || 'HeyFlat'}`)
+    const body = encodeURIComponent(`${t.labels.name}: ${name}\n${t.labels.email}: ${email}\n\n${message}`)
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
   }
 
@@ -19,10 +22,8 @@ export default function ContactSection() {
     <section id="contato" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
       <div className="mx-auto max-w-xl px-4 text-center md:px-8">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Fale com a gente</h2>
-          <p className="mt-3 text-brand-100">
-            Dúvida, sugestão ou algum problema com a sua casa? Manda uma mensagem — a gente responde rapidinho.
-          </p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">{t.title}</h2>
+          <p className="mt-3 text-brand-100">{t.subtitle}</p>
         </Reveal>
 
         <Reveal
@@ -31,7 +32,7 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
           className="mt-8 space-y-4 rounded-2xl bg-white p-8 text-left shadow-xl">
           <div>
-            <label className="text-xs font-medium text-gray-600">Nome</label>
+            <label className="text-xs font-medium text-gray-600">{t.labels.name}</label>
             <input
               type="text"
               required
@@ -41,7 +42,7 @@ export default function ContactSection() {
             />
           </div>
           <div>
-            <label className="text-xs font-medium text-gray-600">E-mail</label>
+            <label className="text-xs font-medium text-gray-600">{t.labels.email}</label>
             <input
               type="email"
               required
@@ -51,7 +52,7 @@ export default function ContactSection() {
             />
           </div>
           <div>
-            <label className="text-xs font-medium text-gray-600">Mensagem</label>
+            <label className="text-xs font-medium text-gray-600">{t.labels.message}</label>
             <textarea
               required
               rows={4}
@@ -65,11 +66,9 @@ export default function ContactSection() {
             type="submit"
             className="w-full rounded-lg bg-brand-600 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
           >
-            Enviar mensagem
+            {t.submit}
           </button>
-          <p className="text-center text-xs text-gray-400">
-            Isso abre seu app de e-mail com a mensagem pronta pra {CONTACT_EMAIL}.
-          </p>
+          <p className="text-center text-xs text-gray-400">{t.note.replace('{email}', CONTACT_EMAIL)}</p>
         </Reveal>
       </div>
     </section>
