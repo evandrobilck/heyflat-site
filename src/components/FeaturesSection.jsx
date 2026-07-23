@@ -84,6 +84,42 @@ function ReportsPreview() {
   )
 }
 
+function ReminderPreview() {
+  return (
+    <div className="w-full max-w-xs space-y-2 rounded-xl border border-gray-200 bg-white p-4">
+      <p className="text-xs font-semibold text-gray-900">Aluguel — vence dia 30</p>
+      <div className="flex items-center gap-2 rounded-lg bg-brand-50 px-3 py-2">
+        <span className="text-sm">📧</span>
+        <p className="text-xs text-gray-600">7 dias antes, às 09:00</p>
+      </div>
+      <div className="flex items-center gap-2 rounded-lg bg-brand-50 px-3 py-2">
+        <span className="text-sm">🔔</span>
+        <p className="text-xs text-gray-600">1 dia antes, às 18:00</p>
+      </div>
+    </div>
+  )
+}
+
+function MaintenancePreview() {
+  return (
+    <div className="w-full max-w-xs space-y-3 rounded-xl border border-gray-200 bg-white p-4">
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-semibold text-gray-900">Vazamento na cozinha</p>
+        <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-medium text-amber-700">
+          Em andamento
+        </span>
+      </div>
+      <div className="flex h-16 w-full items-center justify-center rounded-lg bg-gray-100 text-lg">📷</div>
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-semibold text-gray-900">Checklist de saída</p>
+        <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700">
+          Concluído
+        </span>
+      </div>
+    </div>
+  )
+}
+
 function DevicesPreview() {
   return (
     <div className="flex w-full max-w-xs items-center justify-center gap-4 rounded-xl border border-gray-200 bg-white p-6">
@@ -161,6 +197,18 @@ const FEATURES = [
     preview: CalendarPreview,
   },
   {
+    icon: '🔔',
+    title: 'Lembretes personalizados',
+    description:
+      'Configure quantos lembretes quiser pra cada conta ou tarefa — cada um com seu próprio canal (email, notificação push, ou os dois), quantos dias de antecedência e horário, igual um calendário de verdade. Já a lista de compras é ainda mais direta: assim que alguém adiciona um item, todo mundo da casa recebe um aviso na hora.',
+    bullets: [
+      'Vários lembretes por conta ou tarefa, cada um com seu canal',
+      'Escolha o dia e o horário de cada aviso',
+      'Lista de compras avisa a casa inteira em tempo real',
+    ],
+    preview: ReminderPreview,
+  },
+  {
     icon: '📊',
     title: 'Relatórios de gastos',
     description:
@@ -183,6 +231,18 @@ const FEATURES = [
       'Histórico de quem morou e por quanto tempo',
     ],
     preview: HousePreview,
+  },
+  {
+    icon: '🔧',
+    title: 'Manutenção e inspeções',
+    description:
+      'Registre qualquer problema de manutenção da casa com foto e descrição, e acompanhe até ser resolvido — sem perder o fio no meio de mensagens no grupo. Na hora de trocar de morador, rode um checklist completo de inspeção de entrada ou saída, item por item, pra ninguém discutir depois o que já estava quebrado.',
+    bullets: [
+      'Fotos e descrição em cada problema registrado',
+      'Acompanhamento de status até a resolução',
+      'Checklists de inspeção de entrada e saída',
+    ],
+    preview: MaintenancePreview,
   },
   {
     icon: '🌎',
