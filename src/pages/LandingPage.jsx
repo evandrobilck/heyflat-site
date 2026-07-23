@@ -10,6 +10,7 @@ import PriceSection from '../components/PriceSection'
 import FaqSection from '../components/FaqSection'
 import FinalCtaSection from '../components/FinalCtaSection'
 import ContactSection from '../components/ContactSection'
+import StickyMobileCta from '../components/StickyMobileCta'
 
 export default function LandingPage() {
   return (
@@ -19,17 +20,20 @@ export default function LandingPage() {
         description="Divida contas, organize tarefas e cuide da sua casa compartilhada num app só. AU$15/mês por casa, moradores ilimitados. Grátis por 30 dias."
         path="/"
       />
-      <Hero />
-      <ProblemSection />
-      <LanguagesStrip />
-      <FeaturesSection />
-      <RoommateOfMonthSection />
-      <HowItWorksSection />
-      <ComparisonSection />
-      <PriceSection />
-      <FaqSection />
-      <FinalCtaSection />
-      <ContactSection />
+      <div className="pb-20 md:pb-0">
+        <Hero />
+        <ProblemSection />
+        <LanguagesStrip />
+        <FeaturesSection />
+        <RoommateOfMonthSection />
+        <HowItWorksSection />
+        <ComparisonSection />
+        <PriceSection />
+        <FaqSection />
+        <FinalCtaSection />
+        <ContactSection />
+      </div>
+      <StickyMobileCta />
     </>
   )
 }

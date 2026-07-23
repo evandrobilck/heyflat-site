@@ -35,9 +35,23 @@ const FAQ_ITEMS = [
   },
 ]
 
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+}
+
 export default function FaqSection() {
   return (
     <section id="faq" className="mx-auto max-w-3xl px-4 py-16 md:px-8 md:py-24">
+      <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
       <Reveal>
         <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
           Perguntas frequentes
