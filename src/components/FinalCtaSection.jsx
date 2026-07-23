@@ -6,7 +6,10 @@ export default function FinalCtaSection() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-16 text-center md:px-8 md:py-24">
       <Reveal>
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+        <p className="text-sm font-medium text-brand-600">
+          Criado por quem também já dividiu casa fora do Brasil
+        </p>
+        <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
           Sua casa se organiza sozinha a partir de hoje
         </h2>
         <p className="mt-4 text-lg text-gray-600">
