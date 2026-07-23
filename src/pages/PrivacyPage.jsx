@@ -1,10 +1,17 @@
 import LegalLayout, { LegalSection } from '../components/LegalLayout'
+import Seo from '../components/Seo'
 
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
 export default function PrivacyPage() {
   return (
-    <LegalLayout title="Política de Privacidade" updatedAt="20 de julho de 2026">
+    <>
+      <Seo
+        title="Política de Privacidade — HeyFlat"
+        description="Veja quais dados o HeyFlat coleta, para que são usados e quais escolhas você tem sobre suas informações."
+        path="/privacidade"
+      />
+      <LegalLayout title="Política de Privacidade" updatedAt="20 de julho de 2026">
       <p className="text-sm leading-relaxed">
         Esta política explica quais dados o HeyFlat coleta, para que eles são usados e quais
         escolhas você tem sobre eles. Falamos de forma direta, sem economês — se algo não estiver
@@ -92,5 +99,6 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
     </LegalLayout>
+    </>
   )
 }

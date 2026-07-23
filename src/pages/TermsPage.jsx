@@ -1,10 +1,17 @@
 import LegalLayout, { LegalSection } from '../components/LegalLayout'
+import Seo from '../components/Seo'
 
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Termos de Uso" updatedAt="20 de julho de 2026">
+    <>
+      <Seo
+        title="Termos de Uso — HeyFlat"
+        description="Termos de uso do HeyFlat: como funciona a assinatura por casa, cancelamento e responsabilidades ao usar o app."
+        path="/termos"
+      />
+      <LegalLayout title="Termos de Uso" updatedAt="20 de julho de 2026">
       <p className="text-sm leading-relaxed">
         Ao criar uma conta ou usar o HeyFlat, você concorda com estes termos. Leia com calma — e
         se tiver dúvida, é só chamar a gente em{' '}
@@ -78,5 +85,6 @@ export default function TermsPage() {
         </p>
       </LegalSection>
     </LegalLayout>
+    </>
   )
 }
