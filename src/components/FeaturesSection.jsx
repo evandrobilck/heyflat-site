@@ -109,13 +109,42 @@ function MaintenancePreview() {
           Em andamento
         </span>
       </div>
-      <div className="flex h-16 w-full items-center justify-center rounded-lg bg-gray-100 text-lg">📷</div>
+      <div className="flex h-20 w-full items-center justify-center rounded-lg bg-gray-100 text-lg">📷</div>
       <div className="flex items-center justify-between">
-        <p className="text-xs font-semibold text-gray-900">Checklist de saída</p>
+        <p className="text-xs font-semibold text-gray-900">Torneira do banheiro</p>
         <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700">
-          Concluído
+          Resolvido
         </span>
       </div>
+    </div>
+  )
+}
+
+function InspectionPreview() {
+  const items = [
+    { label: 'Paredes sem furos ou manchas', done: true },
+    { label: 'Fogão e geladeira limpos', done: true },
+    { label: 'Chaves e controle da garagem', done: false },
+  ]
+  return (
+    <div className="w-full max-w-xs space-y-2 rounded-xl border border-gray-200 bg-white p-4">
+      <p className="text-xs font-semibold text-gray-900">Checklist de saída</p>
+      {items.map(({ label, done }) => (
+        <div key={label} className="flex items-center gap-2">
+          <span
+            className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${
+              done ? 'bg-brand-600 text-white' : 'border-2 border-gray-300'
+            }`}
+          >
+            {done && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" className="h-2 w-2">
+                <path d="m5 12 5 5L19 7" />
+              </svg>
+            )}
+          </span>
+          <p className="text-xs text-gray-700">{label}</p>
+        </div>
+      ))}
     </div>
   )
 }
@@ -234,15 +263,27 @@ const FEATURES = [
   },
   {
     icon: '🔧',
-    title: 'Manutenção e inspeções',
+    title: 'Manutenção',
     description:
-      'Registre qualquer problema de manutenção da casa com foto e descrição, e acompanhe até ser resolvido — sem perder o fio no meio de mensagens no grupo. Na hora de trocar de morador, rode um checklist completo de inspeção de entrada ou saída, item por item, pra ninguém discutir depois o que já estava quebrado.',
+      'Registre qualquer problema de manutenção da casa com foto e descrição, e acompanhe até ser resolvido — sem perder o fio no meio de mensagens no grupo. Todo mundo da casa vê o status de cada chamado, do primeiro relato até a solução.',
     bullets: [
       'Fotos e descrição em cada problema registrado',
       'Acompanhamento de status até a resolução',
-      'Checklists de inspeção de entrada e saída',
+      'Histórico completo de tudo que já foi relatado',
     ],
     preview: MaintenancePreview,
+  },
+  {
+    icon: '📋',
+    title: 'Inspeções de entrada e saída',
+    description:
+      'Rode um checklist completo de inspeção, item por item, sempre que um morador entrar ou sair da casa. Fica registrado exatamente o estado de cada coisa, pra ninguém discutir depois o que já estava quebrado antes.',
+    bullets: [
+      'Checklist configurável, item por item',
+      'Use na entrada e na saída de moradores',
+      'Registro que evita discussão sobre danos',
+    ],
+    preview: InspectionPreview,
   },
   {
     icon: '🌎',

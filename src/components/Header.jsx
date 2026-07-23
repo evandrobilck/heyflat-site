@@ -13,7 +13,7 @@ export default function Header() {
     <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <a href="/" className="flex items-center gap-2">
-          <img src="/logo-purple.svg" alt="HeyFlat" className="h-7 w-auto" />
+          <img src="/logo-purple.svg" alt="HeyFlat" className="h-10 w-auto md:h-11" />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
