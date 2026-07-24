@@ -1,9 +1,10 @@
 import { useLocale, localeHome, LOCALES } from '../i18n/LocaleContext'
+import FlagIcon from './FlagIcon'
 
 const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
-const LANG_FLAGS = { en: '🇺🇸', pt: '🇧🇷', es: '🇪🇸' }
+const LANG_LABEL = { en: 'Language', pt: 'Idioma', es: 'Idioma' }
 
 export default function Header() {
   const { locale, dict, href } = useLocale()
@@ -33,19 +34,22 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-1 md:gap-3">
-          <div className="flex items-center gap-1 rounded-lg border border-gray-200 p-1">
-            {LOCALES.map((code) => (
-              <a
-                key={code}
-                href={localeHome(code)}
-                aria-label={code}
-                className={`flex h-7 w-7 items-center justify-center rounded text-sm ${
-                  code === locale ? 'bg-brand-50 ring-1 ring-brand-200' : 'opacity-50 hover:opacity-100'
-                }`}
-              >
-                {LANG_FLAGS[code]}
-              </a>
-            ))}
+          <div className="flex items-center gap-2 rounded-lg border border-gray-200 py-1 pl-2 pr-1">
+            <span className="hidden text-xs font-medium text-gray-400 sm:inline">{LANG_LABEL[locale]}</span>
+            <div className="flex items-center gap-1">
+              {LOCALES.map((code) => (
+                <a
+                  key={code}
+                  href={localeHome(code)}
+                  aria-label={code}
+                  className={`flex h-7 w-7 items-center justify-center rounded ${
+                    code === locale ? 'ring-1 ring-brand-300' : 'opacity-50 hover:opacity-100'
+                  }`}
+                >
+                  <FlagIcon code={code} className="h-4 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
           <a
             href={LOGIN_URL}
