@@ -11,6 +11,7 @@ export default {
       features: 'Funciones',
       price: 'Precio',
       faq: 'Preguntas',
+      guide: 'Guía',
     },
     login: 'Iniciar sesión',
     cta: 'Empezar gratis',
@@ -284,9 +285,125 @@ export default {
     tagline: 'HeyFlat — Tu casa compartida, organizada.',
     storeBadges: { comingSoon: 'Próximamente en', appStore: 'App Store', googlePlay: 'Google Play' },
     columns: { product: 'Producto', follow: 'Síguenos', legal: 'Legal', connect: 'Conectar' },
-    productLinks: ['Funciones', 'Precio', 'Preguntas', 'Contacto'],
+    productLinks: ['Funciones', 'Precio', 'Preguntas', 'Contacto', 'Guía'],
     legalLinks: ['Privacidad', 'Términos de uso', 'Cookies', 'Seguridad'],
     connectLinks: ['Contacto', 'Changelog', 'Acerca de'],
     copyright: 'Hecho en Australia 🇦🇺 · © {year} HeyFlat',
+  },
+  guide: {
+    seo: {
+      title: 'Guía completa de HeyFlat — cómo usar cada función',
+      description:
+        'Guía paso a paso de todo lo que hace HeyFlat: cómo unirte a una casa, dividir cuentas, organizar tareas, lista de compras, mantenimiento y más.',
+    },
+    title: 'Guía completa de HeyFlat',
+    subtitle: 'Desde el primer inicio de sesión hasta el día a día de la casa — cómo usar cada función, explicada en detalle.',
+    tocLabel: 'En esta página',
+    sections: [
+      {
+        id: 'primeros-pasos',
+        title: '1. Primeros pasos: crear tu cuenta y unirte a la casa',
+        paragraphs: [
+          'Para usar HeyFlat necesitas una cuenta y una casa. Si eres el primero de tu casa compartida en usar la app, tú creas la casa. Si un compañero ya la usa, te unes a su casa — ese es el camino más común.',
+        ],
+        steps: [
+          'Crea tu cuenta con email y contraseña, desde el navegador o la app.',
+          'En la primera pantalla, elige entre Crear casa (nadie en tu casa usa HeyFlat todavía) o Unirme a una casa (un compañero ya te invitó).',
+          'Para unirte a una casa existente, pide el código de invitación a alguien que ya sea miembro — está en Casa → Invitar miembros — e ingrésalo en la pantalla de unirse.',
+          'Listo: ya estás dentro de la casa, y las cuentas, tareas y listas compartidas aparecen automáticamente.',
+        ],
+        note: 'Ante la duda, casi siempre es así: quien se muda a una casa que ya existe se une con un código, no crea una casa nueva. Solo crea una casa nueva quien es la primera persona en configurar HeyFlat para esa casa.',
+      },
+      {
+        id: 'cuentas',
+        title: '2. Cuentas: dividiendo los gastos de la casa',
+        paragraphs: [
+          'En Cuentas registras cualquier gasto de la casa y lo divides entre los compañeros — alquiler, internet, luz, agua, o cualquier cuenta puntual.',
+        ],
+        list: [
+          'Divide en partes iguales, por porcentaje, o por un monto exacto para cada persona.',
+          'Las cuentas recurrentes (como el alquiler) se crean una vez y se repiten automáticamente cada período.',
+          'Cada compañero marca su parte como pagada al arreglar cuentas con quien pagó.',
+          'Puedes eliminar una cuenta entera, o solo una ocurrencia específica de una cuenta recurrente, sin afectar las demás.',
+        ],
+      },
+      {
+        id: 'tareas',
+        title: '3. Tareas: organizando las tareas de la casa',
+        paragraphs: ['En Tareas creas y asignas las tareas del hogar — a una persona, a algunas, o a toda la casa.'],
+        list: [
+          'Las tareas recurrentes (sacar la basura, limpiar la cocina) se repiten automáticamente según el período que configures.',
+          'Cada quien marca su tarea como completada al terminarla.',
+          "El ranking mensual 'Compañero del mes' muestra quién está haciendo más — una forma ligera de mantener a todos motivados.",
+        ],
+      },
+      {
+        id: 'gastos',
+        title: '4. Gastos: siguiendo el historial',
+        paragraphs: [
+          'La pestaña Gastos muestra un resumen de todo lo que la casa ha gastado a lo largo del tiempo, organizado por categoría (alquiler, mercado, cuentas, etc.).',
+          'Úsala para entender a dónde va el dinero de la casa, sin tener que sumar nada a mano.',
+        ],
+      },
+      {
+        id: 'compras',
+        title: '5. Compras: lista compartida en tiempo real',
+        paragraphs: [
+          'La lista de Compras la comparten todos los compañeros. Cualquiera puede añadir un artículo en cuanto nota que se acabó, y todos ven la lista actualizarse al instante — sin grupo de WhatsApp lleno de mensajes de lista de compras.',
+        ],
+        note: 'Cuando alguien compra un artículo y registra cuánto gastó, esa compra se agrega automáticamente como una cuenta dividida en Cuentas — no hace falta registrarla de nuevo en otro lugar.',
+      },
+      {
+        id: 'calendario',
+        title: '6. Calendario: todo junto, en un solo lugar',
+        paragraphs: [
+          'El Calendario reúne cuentas y tareas con fecha en una sola vista, para que veas de un vistazo qué vence esta semana o este mes.',
+        ],
+      },
+      {
+        id: 'mantenimiento',
+        title: '7. Mantenimiento: del problema hasta resuelto',
+        paragraphs: [
+          '¿Encontraste un problema en la casa — una llave que gotea, un foco quemado, algo roto? Regístralo en Mantenimiento con foto y descripción, y dale seguimiento hasta que quede resuelto.',
+          'Así nada se pierde en una conversación de grupo, y todos saben qué ya se resolvió y qué sigue pendiente.',
+        ],
+      },
+      {
+        id: 'inspeccion',
+        title: '8. Inspección: checklist de entrada y salida',
+        paragraphs: [
+          'Cuando alguien entra o sale de la casa, corre un checklist de inspección para documentar el estado de cada ambiente — evita discusiones sobre el depósito o daños al salir.',
+        ],
+      },
+      {
+        id: 'casa',
+        title: '9. Casa: información e invitaciones',
+        paragraphs: [
+          'La pestaña Casa reúne la información práctica del día a día: contraseña del Wi-Fi, dirección, y otra información que todos en la casa necesitan consultar de vez en cuando.',
+          'También aquí encuentras y compartes el código de invitación de la casa para sumar nuevos compañeros — revisa la sección Primeros pasos para saber cómo se usa ese código.',
+        ],
+      },
+      {
+        id: 'notificaciones',
+        title: '10. Notificaciones y recordatorios',
+        paragraphs: [
+          'Las cuentas y tareas pueden tener tantos recordatorios como quieras, cada uno con su propio canal (email, notificación push, o ambos) y con la anticipación que prefieras — como una app de calendario.',
+          'La lista de Compras funciona distinto: en cuanto alguien añade un artículo, toda la casa recibe una notificación instantánea, sin necesidad de configurar nada.',
+        ],
+      },
+      {
+        id: 'suscripcion',
+        title: '11. Suscripción de la casa',
+        paragraphs: [
+          'Toda casa nueva en HeyFlat empieza con un período de prueba gratuito. Cuando ese período termina, la casa necesita una suscripción activa para seguir usando la app — es un acuerdo entre los compañeros de casa, no un cobro por persona.',
+          'Cuando termine la prueba (o antes, si prefieres), puedes suscribirte directamente desde la app, y cancelar cuando quieras, sin penalización.',
+        ],
+      },
+    ],
+    cta: {
+      title: '¿Listo para organizar tu casa?',
+      subtitle: '30 días gratis, sin tarjeta de crédito.',
+      button: 'Crear cuenta gratis',
+    },
   },
 }

@@ -1,4 +1,4 @@
-import { useLocale, localeHome } from '../i18n/LocaleContext'
+import { useLocale, localeHome, guidePath } from '../i18n/LocaleContext'
 
 const SOCIAL_LINKS = [
   { href: '#', label: 'X (Twitter)', icon: 'x' },
@@ -84,6 +84,7 @@ export default function Footer() {
     { href: href('preco'), label: t.productLinks[1] },
     { href: href('faq'), label: t.productLinks[2] },
     { href: href('contato'), label: t.productLinks[3] },
+    { href: guidePath(locale), label: t.productLinks[4] },
   ]
   const legalLinks = [
     { href: '/privacidade', label: t.legalLinks[0] },

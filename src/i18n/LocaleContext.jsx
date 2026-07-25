@@ -13,6 +13,11 @@ export function localeHome(locale) {
   return locale === 'en' ? '/' : `/${locale}`
 }
 
+// Guide page path per locale, same prefixing convention as localeHome.
+export function guidePath(locale) {
+  return locale === 'en' ? '/guia' : `/${locale}/guia`
+}
+
 const LocaleContext = createContext(null)
 
 export function LocaleProvider({ locale, children }) {
