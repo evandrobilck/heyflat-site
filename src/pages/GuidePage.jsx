@@ -5,6 +5,23 @@ import { useLocale, guidePath } from '../i18n/LocaleContext'
 
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
+// Real app screenshots, one per section, in the same order as the
+// sections arrays below (identical across locales — only the dict text
+// changes per language, the screenshots are shared).
+const SECTION_IMAGES = [
+  'primeiros-passos',
+  'contas',
+  'tarefas',
+  'gastos',
+  'compras',
+  'calendario',
+  'manutencao',
+  'inspecao',
+  'casa',
+  'notificacoes',
+  'assinatura',
+]
+
 const ALTERNATES = [
   { lang: 'en', path: guidePath('en') },
   { lang: 'pt', path: guidePath('pt') },
@@ -54,30 +71,43 @@ export default function GuidePage() {
             {t.sections.map((section, index) => (
               <Reveal key={section.id} delay={Math.min(index * 0.04, 0.24)} y={16}>
                 <section id={section.id} className="scroll-mt-24">
-                  <h2 className="text-xl font-bold text-gray-900 md:text-2xl">{section.title}</h2>
-                  <div className="mt-3 space-y-3 text-sm leading-relaxed text-gray-600 md:text-base">
-                    {section.paragraphs?.map((paragraph, i) => (
-                      <p key={i}>{paragraph}</p>
-                    ))}
-                    {section.steps && (
-                      <ol className="list-decimal space-y-2 pl-5">
-                        {section.steps.map((step, i) => (
-                          <li key={i}>{step}</li>
+                  <div className="flex flex-col gap-6 md:flex-row md:gap-10">
+                    <div className="min-w-0 flex-1">
+                      <h2 className="text-xl font-bold text-gray-900 md:text-2xl">{section.title}</h2>
+                      <div className="mt-3 space-y-3 text-sm leading-relaxed text-gray-600 md:text-base">
+                        {section.paragraphs?.map((paragraph, i) => (
+                          <p key={i}>{paragraph}</p>
                         ))}
-                      </ol>
-                    )}
-                    {section.list && (
-                      <ul className="list-disc space-y-2 pl-5">
-                        {section.list.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {section.note && (
-                      <div className="rounded-xl border border-brand-200 bg-brand-50 p-4 text-sm text-brand-800">
-                        {section.note}
+                        {section.steps && (
+                          <ol className="list-decimal space-y-2 pl-5">
+                            {section.steps.map((step, i) => (
+                              <li key={i}>{step}</li>
+                            ))}
+                          </ol>
+                        )}
+                        {section.list && (
+                          <ul className="list-disc space-y-2 pl-5">
+                            {section.list.map((item, i) => (
+                              <li key={i}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {section.note && (
+                          <div className="rounded-xl border border-brand-200 bg-brand-50 p-4 text-sm text-brand-800">
+                            {section.note}
+                          </div>
+                        )}
                       </div>
-                    )}
+                    </div>
+
+                    <div className="shrink-0 md:w-64">
+                      <img
+                        src={`/guide/${SECTION_IMAGES[index]}.png`}
+                        alt={section.title}
+                        loading="lazy"
+                        className="mx-auto w-48 rounded-2xl border border-gray-200 shadow-md md:w-full"
+                      />
+                    </div>
                   </div>
                 </section>
               </Reveal>
