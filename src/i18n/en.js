@@ -281,7 +281,10 @@ export default {
     subtitle: "Question, suggestion, or an issue with your house? Send us a message — we'll get back to you quickly.",
     labels: { name: 'Name', email: 'Email', message: 'Message' },
     submit: 'Send message',
-    note: 'This opens your email app with the message ready to send to {email}.',
+    sending: 'Sending…',
+    note: "We'll deliver this straight to {email} — no email app needed.",
+    success: "Message sent! We'll get back to you soon.",
+    error: 'Something went wrong. Please try again, or email us directly at {email}.',
     mailSubject: 'Get in touch',
   },
   footer: {

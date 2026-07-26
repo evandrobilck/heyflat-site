@@ -278,7 +278,10 @@ export default {
     subtitle: '¿Duda, sugerencia o algún problema con tu casa? Mándanos un mensaje — te respondemos rapidito.',
     labels: { name: 'Nombre', email: 'Correo', message: 'Mensaje' },
     submit: 'Enviar mensaje',
-    note: 'Esto abre tu app de correo con el mensaje listo para enviar a {email}.',
+    sending: 'Enviando…',
+    note: 'Esto envía el mensaje directo a nuestro correo, {email} — sin abrir nada.',
+    success: '¡Mensaje enviado! Te responderemos pronto.',
+    error: 'Algo salió mal. Intenta de nuevo, o escríbenos directo a {email}.',
     mailSubject: 'Escríbenos',
   },
   footer: {

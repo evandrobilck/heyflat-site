@@ -10,12 +10,26 @@ export default function ContactSection() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    const subject = encodeURIComponent(`${t.mailSubject} — ${name || 'HeyFlat'}`)
-    const body = encodeURIComponent(`${t.labels.name}: ${name}\n${t.labels.email}: ${email}\n\n${message}`)
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+    setStatus('sending')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      })
+      if (!res.ok) throw new Error('request failed')
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setMessage('')
+    } catch (err) {
+      console.error(err)
+      setStatus('error')
+    }
   }
 
   return (
@@ -64,11 +78,21 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-brand-600 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
+            disabled={status === 'sending'}
+            className="w-full rounded-lg bg-brand-600 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:opacity-60"
           >
-            {t.submit}
+            {status === 'sending' ? t.sending : t.submit}
           </button>
-          <p className="text-center text-xs text-gray-400">{t.note.replace('{email}', CONTACT_EMAIL)}</p>
+
+          {status === 'success' && (
+            <p className="text-center text-xs font-medium text-green-600">{t.success}</p>
+          )}
+          {status === 'error' && (
+            <p className="text-center text-xs font-medium text-red-600">{t.error.replace('{email}', CONTACT_EMAIL)}</p>
+          )}
+          {status !== 'success' && status !== 'error' && (
+            <p className="text-center text-xs text-gray-400">{t.note.replace('{email}', CONTACT_EMAIL)}</p>
+          )}
         </Reveal>
       </div>
     </section>

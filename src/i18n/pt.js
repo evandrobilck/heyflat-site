@@ -279,7 +279,10 @@ export default {
     subtitle: 'Dúvida, sugestão ou algum problema com a sua casa? Manda uma mensagem — a gente responde rapidinho.',
     labels: { name: 'Nome', email: 'E-mail', message: 'Mensagem' },
     submit: 'Enviar mensagem',
-    note: 'Isso abre seu app de e-mail com a mensagem pronta pra {email}.',
+    sending: 'Enviando…',
+    note: 'Isso manda a mensagem direto pro nosso e-mail, {email} — sem abrir nada.',
+    success: 'Mensagem enviada! Vamos te responder em breve.',
+    error: 'Algo deu errado. Tenta de novo, ou manda direto pra {email}.',
     mailSubject: 'Fale com a gente',
   },
   footer: {
