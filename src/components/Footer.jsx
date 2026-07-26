@@ -1,11 +1,12 @@
 import { useLocale, localeHome, guidePath } from '../i18n/LocaleContext'
 
 const SOCIAL_LINKS = [
-  { href: '#', label: 'X (Twitter)', icon: 'x' },
-  { href: '#', label: 'Instagram', icon: 'instagram' },
-  { href: '#', label: 'LinkedIn', icon: 'linkedin' },
-  { href: '#', label: 'TikTok', icon: 'tiktok' },
-  { href: '#', label: 'Facebook', icon: 'facebook' },
+  { href: 'https://facebook.com/heyflatapp', label: 'Facebook', icon: 'facebook' },
+  { href: 'https://instagram.com/heyflatapp', label: 'Instagram', icon: 'instagram' },
+  { href: 'https://x.com/heyflatapp', label: 'X (Twitter)', icon: 'x' },
+  { href: 'https://tiktok.com/@heyflatapp', label: 'TikTok', icon: 'tiktok' },
+  { href: 'https://linkedin.com/company/heyflatapp', label: 'LinkedIn', icon: 'linkedin' },
+  { href: 'https://youtube.com/@heyflatapp', label: 'YouTube', icon: 'youtube' },
 ]
 
 function SocialIcon({ icon }) {
@@ -36,6 +37,14 @@ function SocialIcon({ icon }) {
     return (
       <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
         <path d="M15 8.5h2V5.3c-.5-.1-1.4-.2-2.3-.2-2.3 0-3.9 1.4-3.9 4v2H8.5v3H10.8v7h3v-7h2.3l.4-3H13.8v-1.7c0-.9.3-1.3 1.2-1.3Z" />
+      </svg>
+    )
+  }
+  if (icon === 'youtube') {
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+        <path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.7.4-4.7Z" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M10 9.5v5l4.5-2.5Z" />
       </svg>
     )
   }
