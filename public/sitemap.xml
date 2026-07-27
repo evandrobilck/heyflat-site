@@ -28,6 +28,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/" />
   </url>
   <url>
+    <loc>https://heyflat.com.au/guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/guia" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt/guia" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es/guia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/guia" />
+  </url>
+  <url>
+    <loc>https://heyflat.com.au/pt/guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/guia" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt/guia" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es/guia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/guia" />
+  </url>
+  <url>
+    <loc>https://heyflat.com.au/es/guia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heyflat.com.au/guia" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://heyflat.com.au/pt/guia" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://heyflat.com.au/es/guia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heyflat.com.au/guia" />
+  </url>
+  <url>
     <loc>https://heyflat.com.au/privacidade</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
