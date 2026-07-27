@@ -1,12 +1,21 @@
 import { useEffect } from 'react'
 
-const SITE_URL = 'https://heyflat.com.au'
+export const SITE_URL = 'https://heyflat.com.au'
+
+// Read by scripts/prerender.mjs right after renderToString(): since effects
+// never run during SSR, this is the only way the build-time prerender step
+// learns each route's title/description/canonical/alternates.
+export const seoCollector = { current: null }
 
 // Keeps <title>, meta description, canonical and hreflang alternates in
 // sync per route. Google's crawler executes JS and reads these, so this
 // is enough for search — social-share crawlers use the static tags in
 // index.html instead.
 export default function Seo({ title, description, path = '/', alternates = [] }) {
+  if (typeof window === 'undefined') {
+    seoCollector.current = { title, description, path, alternates }
+  }
+
   useEffect(() => {
     if (title) document.title = title
 

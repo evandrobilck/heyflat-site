@@ -20,8 +20,17 @@ export function guidePath(locale) {
 
 const LocaleContext = createContext(null)
 
+// Read by scripts/prerender.mjs right after renderToString(): the <html
+// lang> attribute is otherwise only set client-side via the effect below,
+// which never runs during SSR.
+export const localeCollector = { current: null }
+
 export function LocaleProvider({ locale, children }) {
   const dict = DICTS[locale] ?? DICTS[DEFAULT_LOCALE]
+
+  if (typeof window === 'undefined') {
+    localeCollector.current = locale
+  }
 
   useEffect(() => {
     document.documentElement.lang = locale === 'en' ? 'en' : locale
