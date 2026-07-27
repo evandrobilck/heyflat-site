@@ -1,4 +1,4 @@
-import { useLocale, localeHome, guidePath } from '../i18n/LocaleContext'
+import { useLocale, localeHome, guidePath, blogIndexPath } from '../i18n/LocaleContext'
 
 const SOCIAL_LINKS = [
   { href: 'https://facebook.com/heyflatapp', label: 'Facebook', icon: 'facebook' },
@@ -94,6 +94,7 @@ export default function Footer() {
     { href: href('faq'), label: t.productLinks[2] },
     { href: href('contato'), label: t.productLinks[3] },
     { href: guidePath(locale), label: t.productLinks[4] },
+    { href: blogIndexPath(locale), label: t.productLinks[5] },
   ]
   const legalLinks = [
     { href: '/privacidade', label: t.legalLinks[0] },

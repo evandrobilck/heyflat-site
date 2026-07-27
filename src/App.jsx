@@ -4,6 +4,8 @@ import LandingPage from './pages/LandingPage'
 import GuidePage from './pages/GuidePage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
+import BlogIndexPage from './pages/BlogIndexPage'
+import BlogPostPage from './pages/BlogPostPage'
 
 // Split out from App so the SSR prerender entry can render these routes
 // under a StaticRouter without also pulling in BrowserRouter (which touches
@@ -57,6 +59,54 @@ export function AppRoutes() {
           element={
             <LocaleLayout locale="es">
               <GuidePage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <LocaleLayout locale="en">
+              <BlogIndexPage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/pt/blog"
+          element={
+            <LocaleLayout locale="pt">
+              <BlogIndexPage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/es/blog"
+          element={
+            <LocaleLayout locale="es">
+              <BlogIndexPage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <LocaleLayout locale="en">
+              <BlogPostPage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/pt/blog/:slug"
+          element={
+            <LocaleLayout locale="pt">
+              <BlogPostPage />
+            </LocaleLayout>
+          }
+        />
+        <Route
+          path="/es/blog/:slug"
+          element={
+            <LocaleLayout locale="es">
+              <BlogPostPage />
             </LocaleLayout>
           }
         />

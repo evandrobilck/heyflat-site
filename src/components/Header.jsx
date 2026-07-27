@@ -1,4 +1,4 @@
-import { useLocale, localeHome, guidePath, LOCALES } from '../i18n/LocaleContext'
+import { useLocale, localeHome, guidePath, blogIndexPath, LOCALES } from '../i18n/LocaleContext'
 import FlagIcon from './FlagIcon'
 
 const LOGIN_URL = import.meta.env.VITE_APP_LOGIN_URL
@@ -17,6 +17,7 @@ export default function Header() {
     { href: href('preco'), label: nav.price },
     { href: href('faq'), label: nav.faq },
     { href: guidePath(locale), label: nav.guide },
+    { href: blogIndexPath(locale), label: nav.blog },
   ]
 
   return (

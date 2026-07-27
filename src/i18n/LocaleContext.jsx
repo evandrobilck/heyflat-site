@@ -18,6 +18,17 @@ export function guidePath(locale) {
   return locale === 'en' ? '/guia' : `/${locale}/guia`
 }
 
+// Blog index path per locale, same prefixing convention as localeHome.
+export function blogIndexPath(locale) {
+  return locale === 'en' ? '/blog' : `/${locale}/blog`
+}
+
+// Blog post path per locale — slugs are shared across locales (only the
+// prefix changes), matching guidePath's convention.
+export function blogPostPath(locale, slug) {
+  return `${blogIndexPath(locale)}/${slug}`
+}
+
 const LocaleContext = createContext(null)
 
 // Read by scripts/prerender.mjs right after renderToString(): the <html
