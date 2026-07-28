@@ -8,12 +8,15 @@ const NAV_ITEMS = [
 
 export default function WebMockup() {
   return (
-    <div className="w-full max-w-[560px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
+    <div
+      aria-hidden="true"
+      className="w-full max-w-[560px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl"
+    >
       <div className="flex items-center gap-2 border-b border-gray-100 bg-gray-50 px-4 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
         <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-300" />
-        <span className="ml-3 flex-1 truncate rounded-md bg-white px-3 py-1 text-[11px] text-gray-400 ring-1 ring-gray-200">
+        <span className="ml-3 flex-1 truncate rounded-md bg-white px-3 py-1 text-[11px] text-gray-600 ring-1 ring-gray-200">
           app.heyflat.com.au
         </span>
       </div>

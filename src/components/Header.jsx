@@ -37,7 +37,7 @@ export default function Header() {
 
         <div className="flex items-center gap-1 md:gap-3">
           <div className="flex items-center gap-2 rounded-lg border border-gray-200 py-1 pl-2 pr-1">
-            <span className="hidden text-xs font-medium text-gray-400 sm:inline">{LANG_LABEL[locale]}</span>
+            <span className="hidden text-xs font-medium text-gray-600 sm:inline">{LANG_LABEL[locale]}</span>
             <div className="flex items-center gap-1">
               {LOCALES.map((code) => (
                 <a

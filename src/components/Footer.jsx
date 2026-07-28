@@ -77,7 +77,7 @@ function StoreBadge({ label, sublabel, icon }) {
     <span className="flex cursor-not-allowed items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 opacity-70">
       <span className="text-lg leading-none">{icon}</span>
       <span className="text-left leading-tight">
-        <span className="block text-[9px] text-gray-400">{sublabel}</span>
+        <span className="block text-[9px] text-gray-300">{sublabel}</span>
         <span className="block text-xs font-semibold text-white">{label}</span>
       </span>
     </span>
@@ -144,7 +144,7 @@ export default function Footer() {
           <FooterColumn title={t.columns.connect} links={connectLinks} />
         </div>
 
-        <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-gray-500">
+        <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-gray-400">
           {t.copyright.replace('{year}', new Date().getFullYear())}
         </p>
       </div>

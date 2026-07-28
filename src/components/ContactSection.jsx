@@ -46,8 +46,11 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
           className="mt-8 space-y-4 rounded-2xl bg-white p-8 text-left shadow-xl">
           <div>
-            <label className="text-xs font-medium text-gray-600">{t.labels.name}</label>
+            <label htmlFor="contact-name" className="text-xs font-medium text-gray-600">
+              {t.labels.name}
+            </label>
             <input
+              id="contact-name"
               type="text"
               required
               value={name}
@@ -56,8 +59,11 @@ export default function ContactSection() {
             />
           </div>
           <div>
-            <label className="text-xs font-medium text-gray-600">{t.labels.email}</label>
+            <label htmlFor="contact-email" className="text-xs font-medium text-gray-600">
+              {t.labels.email}
+            </label>
             <input
+              id="contact-email"
               type="email"
               required
               value={email}
@@ -66,8 +72,11 @@ export default function ContactSection() {
             />
           </div>
           <div>
-            <label className="text-xs font-medium text-gray-600">{t.labels.message}</label>
+            <label htmlFor="contact-message" className="text-xs font-medium text-gray-600">
+              {t.labels.message}
+            </label>
             <textarea
+              id="contact-message"
               required
               rows={4}
               value={message}

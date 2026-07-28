@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Self-hosted (not Google Fonts CDN) so the page never blocks first paint
+   on a third-party request. Inter's variable-font file covers weights
+   400-800 in one file — no separate download per weight. Latin subset
+   only (U+0000-00FF covers every accented character EN/PT/ES need; the
+   full latin-ext subset is Eastern-European glyphs this site never uses). */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fonts/inter/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 @theme {
   --color-brand-50: #f4ecff;
   --color-brand-100: #e7d9ff;

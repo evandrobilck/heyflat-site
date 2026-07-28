@@ -36,7 +36,7 @@ export default function Hero() {
                 {t.ctaSecondary}
               </a>
             </div>
-            <p className="mt-3 text-xs text-gray-400">{t.finePrint}</p>
+            <p className="mt-3 text-xs text-gray-600">{t.finePrint}</p>
             <p className="mt-4 text-xs font-medium text-gray-500">{t.trustBar}</p>
           </div>
         </Reveal>

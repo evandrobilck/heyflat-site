@@ -6,7 +6,7 @@ export default function LocaleLayout({ locale, children }) {
   return (
     <LocaleProvider locale={locale}>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
     </LocaleProvider>
   )

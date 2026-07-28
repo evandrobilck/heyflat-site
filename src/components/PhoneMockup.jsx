@@ -1,6 +1,9 @@
 export default function PhoneMockup() {
   return (
-    <div className="relative mx-auto w-[280px] rounded-[2.5rem] border-[10px] border-gray-900 bg-gray-900 shadow-2xl">
+    <div
+      aria-hidden="true"
+      className="relative mx-auto w-[280px] rounded-[2.5rem] border-[10px] border-gray-900 bg-gray-900 shadow-2xl"
+    >
       <div className="absolute left-1/2 top-0 h-5 w-28 -translate-x-1/2 rounded-b-2xl bg-gray-900" />
       <div className="h-[560px] overflow-hidden rounded-[2rem] bg-gray-50">
         <div className="space-y-3 p-3">
