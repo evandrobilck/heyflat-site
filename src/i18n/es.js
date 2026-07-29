@@ -231,14 +231,23 @@ export default {
   price: {
     title: 'Un precio por casa. Todos los compañeros incluidos.',
     subtitle:
-      'No es por persona. Es un valor único para toda la casa — 3, 5 u 8 compañeros, el precio es el mismo. Una suscripción, toda la casa con acceso completo.',
-    planName: 'HeyFlat Casa',
-    price: 'AU$ 15',
-    period: '/mes por casa',
+      'No es por persona. Es un valor único para toda la casa — 3, 5 u 8 compañeros, el precio es el mismo. Elegí el ciclo de facturación que más le convenga a tu casa.',
     trial: '30 días gratis para probar',
     features: ['Compañeros ilimitados, sin costo extra', '30 días gratis, sin tarjeta', 'Cancela cuando quieras'],
     cta: 'Empezar los 30 días gratis',
     finePrint: 'Solo a quien creó la casa se le cobra. Sin cargo de tarjeta para los demás compañeros.',
+    plans: [
+      { id: 'monthly', name: 'Mensual', price: 'AU$15', period: '/mes', note: null, badge: null },
+      { id: 'semiannual', name: 'Semestral', price: 'AU$81', period: '/6 meses', note: 'equivale a AU$13,50/mes', badge: null },
+      {
+        id: 'annual',
+        name: 'Anual',
+        price: 'AU$150',
+        period: '/año',
+        note: 'equivale a AU$12,50/mes · 2 meses gratis',
+        badge: 'Mejor precio',
+      },
+    ],
   },
   faq: {
     title: 'Preguntas frecuentes',
@@ -246,9 +255,12 @@ export default {
       {
         question: '¿El precio es por persona o por casa?',
         answer:
-          'Por casa, siempre. Son AU$15 al mes por toda la casa, sin importar cuántos compañeros sean. Una persona se suscribe y todos tienen acceso completo.',
+          'Por casa, siempre. Desde AU$15 al mes por toda la casa (o AU$81 cada 6 meses, o AU$150 al año con descuento), sin importar cuántos compañeros sean. Una persona se suscribe y todos tienen acceso completo.',
       },
-      { question: '¿Si entra un compañero más, sube el precio?', answer: 'No. Compañeros ilimitados, siempre AU$15 por casa.' },
+      {
+        question: '¿Si entra un compañero más, sube el precio?',
+        answer: 'No. Compañeros ilimitados, siempre el mismo precio por casa, sea cual sea el plan que elijan.',
+      },
       {
         question: '¿La app procesa los pagos entre nosotros?',
         answer:

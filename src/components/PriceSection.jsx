@@ -15,31 +15,47 @@ export default function PriceSection() {
           <p className="mt-3 text-brand-100">{t.subtitle}</p>
         </Reveal>
 
-        <Reveal delay={0.15} className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-8 text-left shadow-xl">
-          <p className="text-sm font-semibold text-brand-700">{t.planName}</p>
-          <p className="mt-2">
-            <span className="text-4xl font-extrabold text-gray-900">{t.price}</span>
-            <span className="text-sm text-gray-500">{t.period}</span>
-          </p>
-          <p className="mt-1 text-sm font-medium text-green-600">{t.trial}</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {t.plans.map((plan, index) => (
+            <Reveal
+              key={plan.id}
+              delay={0.1 + index * 0.05}
+              y={16}
+              className="relative rounded-2xl bg-white p-8 text-left shadow-xl"
+            >
+              {plan.badge && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-amber-900">
+                  {plan.badge}
+                </span>
+              )}
+              <p className="text-sm font-semibold text-brand-700">{plan.name}</p>
+              <p className="mt-2">
+                <span className="text-4xl font-extrabold text-gray-900">{plan.price}</span>
+                <span className="text-sm text-gray-500">{plan.period}</span>
+              </p>
+              {plan.note && <p className="mt-1 text-xs text-gray-400">{plan.note}</p>}
+              <p className="mt-3 text-sm font-medium text-green-600">{t.trial}</p>
 
-          <ul className="mt-6 space-y-3">
-            {t.features.map((feature) => (
-              <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
-                <span className="mt-0.5 text-brand-600">✓</span>
-                {feature}
-              </li>
-            ))}
-          </ul>
+              <ul className="mt-6 space-y-3">
+                {t.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-0.5 text-brand-600">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
-          <a
-            href={SIGNUP_URL}
-            className="mt-8 block rounded-lg bg-brand-600 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
-          >
-            {t.cta}
-          </a>
-          <p className="mt-3 text-center text-xs text-gray-400">{t.finePrint}</p>
-        </Reveal>
+              <a
+                href={SIGNUP_URL}
+                className="mt-8 block rounded-lg bg-brand-600 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
+              >
+                {t.cta}
+              </a>
+            </Reveal>
+          ))}
+        </div>
+
+        <p className="mt-8 text-center text-xs text-brand-100">{t.finePrint}</p>
       </div>
     </section>
   )

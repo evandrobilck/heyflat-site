@@ -234,14 +234,23 @@ export default {
   price: {
     title: 'One price per house. Every roommate included.',
     subtitle:
-      'Not per person. One flat price for the whole house — 3, 5 or 8 roommates, same price. One subscription, the whole house with full access.',
-    planName: 'HeyFlat House',
-    price: 'AU$ 15',
-    period: '/mo per house',
+      'Not per person. One flat price for the whole house — 3, 5 or 8 roommates, same price. Pick whichever billing cycle suits your house.',
     trial: '30 days free to try',
     features: ['Unlimited roommates, no extra cost', '30 days free, no card', 'Cancel anytime'],
     cta: 'Start your 30 days free',
     finePrint: 'Only whoever created the house is charged. No card fee for the other roommates.',
+    plans: [
+      { id: 'monthly', name: 'Monthly', price: 'AU$15', period: '/mo', note: null, badge: null },
+      { id: 'semiannual', name: 'Semiannual', price: 'AU$81', period: '/6 mo', note: 'works out to AU$13.50/mo', badge: null },
+      {
+        id: 'annual',
+        name: 'Annual',
+        price: 'AU$150',
+        period: '/yr',
+        note: 'works out to AU$12.50/mo · 2 months free',
+        badge: 'Best value',
+      },
+    ],
   },
   faq: {
     title: 'Frequently asked questions',
@@ -249,9 +258,12 @@ export default {
       {
         question: 'Is the price per person or per house?',
         answer:
-          "Per house, always. It's AU$15 a month for the whole house, no matter how many roommates you are. One person subscribes and everyone gets full access.",
+          "Per house, always. Starting at AU$15/month for the whole house (or AU$81 every 6 months, or AU$150/year at a discount), no matter how many roommates you are. One person subscribes and everyone gets full access.",
       },
-      { question: 'If one more roommate joins, does the price go up?', answer: 'No. Unlimited roommates, always AU$15 per house.' },
+      {
+        question: 'If one more roommate joins, does the price go up?',
+        answer: 'No. Unlimited roommates, always the same price per house, whichever plan you pick.',
+      },
       {
         question: 'Does the app process payments between us?',
         answer:

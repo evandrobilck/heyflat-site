@@ -231,14 +231,23 @@ export default {
   price: {
     title: 'Um preço por casa. Todos os moradores inclusos.',
     subtitle:
-      'Não é por pessoa. É um valor único pela casa inteira — 3, 5 ou 8 moradores, o preço é o mesmo. Uma assinatura, a casa toda com acesso completo.',
-    planName: 'HeyFlat Casa',
-    price: 'AU$ 15',
-    period: '/mês por casa',
+      'Não é por pessoa. É um valor único pela casa inteira — 3, 5 ou 8 moradores, o preço é o mesmo. Escolha o ciclo de cobrança que fizer mais sentido pra sua casa.',
     trial: '30 dias grátis pra testar',
     features: ['Moradores ilimitados, sem custo extra', '30 dias grátis, sem cartão', 'Cancele quando quiser'],
     cta: 'Começar os 30 dias grátis',
     finePrint: 'Só quem criou a casa é cobrado. Sem taxa de cartão pros demais moradores.',
+    plans: [
+      { id: 'monthly', name: 'Mensal', price: 'AU$15', period: '/mês', note: null, badge: null },
+      { id: 'semiannual', name: 'Semestral', price: 'AU$81', period: '/6 meses', note: 'equivale a AU$13,50/mês', badge: null },
+      {
+        id: 'annual',
+        name: 'Anual',
+        price: 'AU$150',
+        period: '/ano',
+        note: 'equivale a AU$12,50/mês · 2 meses grátis',
+        badge: 'Melhor custo-benefício',
+      },
+    ],
   },
   faq: {
     title: 'Perguntas frequentes',
@@ -246,9 +255,12 @@ export default {
       {
         question: 'O preço é por pessoa ou por casa?',
         answer:
-          'Por casa, sempre. São AU$15 por mês pela casa inteira, independente de quantos moradores vocês são. Uma pessoa assina e todo mundo tem acesso completo.',
+          'Por casa, sempre. A partir de AU$15/mês pela casa inteira (ou AU$81 a cada 6 meses, ou AU$150 por ano, com desconto), independente de quantos moradores vocês são. Uma pessoa assina e todo mundo tem acesso completo.',
       },
-      { question: 'Se entrar mais um morador, o preço sobe?', answer: 'Não. Moradores ilimitados, sempre AU$15 por casa.' },
+      {
+        question: 'Se entrar mais um morador, o preço sobe?',
+        answer: 'Não. Moradores ilimitados, sempre o mesmo valor por casa, no plano que vocês escolherem.',
+      },
       {
         question: 'O app processa os pagamentos entre a gente?',
         answer:
