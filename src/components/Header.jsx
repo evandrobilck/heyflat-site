@@ -27,7 +27,7 @@ export default function Header() {
           <img src="/logo-purple.svg" alt="HeyFlat" className="h-10 w-auto md:h-11" />
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
+        <nav className="hidden items-center gap-5 text-sm font-medium text-gray-600 md:flex">
           {NAV_LINKS.map(({ href: linkHref, label }) => (
             <a key={linkHref} href={linkHref} className="hover:text-brand-600">
               {label}
