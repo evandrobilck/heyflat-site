@@ -213,7 +213,9 @@ export default function FeaturesSection() {
               }`}
             >
               <Reveal className="flex flex-1 justify-center" x={fromRight ? 40 : -40} y={0}>
-                <Preview t={dict.previews[preview]} />
+                <div className="transition-transform duration-300 hover:-translate-y-1">
+                  <Preview t={dict.previews[preview]} />
+                </div>
               </Reveal>
               <Reveal className="flex-1" x={fromRight ? -40 : 40} y={0} delay={0.1}>
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-2xl">

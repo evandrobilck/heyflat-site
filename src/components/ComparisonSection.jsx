@@ -49,7 +49,10 @@ export default function ComparisonSection() {
             {t.rows.map((label, index) => {
               const [other, heyflat] = ROW_VALUES[index]
               return (
-                <tr key={label} className={index % 2 === 1 ? 'bg-gray-50/60' : undefined}>
+                <tr
+                  key={label}
+                  className={`transition-colors duration-200 hover:bg-brand-50/50 ${index % 2 === 1 ? 'bg-gray-50/60' : ''}`}
+                >
                   <td className="px-4 py-3 text-gray-700">{label}</td>
                   <td className="px-4 py-3 text-center">
                     <Cell value={other} partialLabel={t.partial} />

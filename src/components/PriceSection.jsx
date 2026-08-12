@@ -33,7 +33,7 @@ export default function PriceSection() {
               key={plan.id}
               delay={0.1 + index * 0.05}
               y={16}
-              className={`relative rounded-2xl bg-white p-8 text-left shadow-xl ${CARD_STYLES[plan.id]}`}
+              className={`relative rounded-2xl bg-white p-8 text-left shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl ${CARD_STYLES[plan.id]}`}
             >
               {plan.badge && (
                 <span

@@ -16,7 +16,7 @@ export default function ProblemSection() {
           <Reveal
             key={title}
             delay={Math.min(index * 0.08, 0.24)}
-            className="rounded-2xl border border-gray-200 bg-white p-6"
+            className="rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
           >
             <p className="font-semibold text-gray-900">{title}</p>
             <p className="mt-2 text-sm text-gray-600">{text}</p>
