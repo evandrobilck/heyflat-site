@@ -72,14 +72,33 @@ function FooterColumn({ title, links }) {
   )
 }
 
-function StoreBadge({ label, sublabel, icon }) {
-  return (
-    <span className="flex cursor-not-allowed items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 opacity-70">
+function StoreBadge({ label, sublabel, icon, href }) {
+  const content = (
+    <>
       <span className="text-lg leading-none">{icon}</span>
       <span className="text-left leading-tight">
         <span className="block text-[9px] text-gray-300">{sublabel}</span>
         <span className="block text-xs font-semibold text-white">{label}</span>
       </span>
+    </>
+  )
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 hover:bg-white/10"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <span className="flex cursor-not-allowed items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 opacity-70">
+      {content}
     </span>
   )
 }
@@ -119,7 +138,12 @@ export default function Footer() {
 
           <div className="flex flex-wrap gap-3">
             <StoreBadge icon="🍎" sublabel={t.storeBadges.comingSoon} label={t.storeBadges.appStore} />
-            <StoreBadge icon="▶" sublabel={t.storeBadges.comingSoon} label={t.storeBadges.googlePlay} />
+            <StoreBadge
+              icon="▶"
+              sublabel={t.storeBadges.getIt}
+              label={t.storeBadges.googlePlay}
+              href="https://play.google.com/store/apps/details?id=au.com.heyflat"
+            />
           </div>
         </div>
 

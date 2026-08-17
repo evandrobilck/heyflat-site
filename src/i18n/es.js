@@ -308,7 +308,7 @@ export default {
   },
   footer: {
     tagline: 'HeyFlat — Tu casa compartida, organizada.',
-    storeBadges: { comingSoon: 'Próximamente en', appStore: 'App Store', googlePlay: 'Google Play' },
+    storeBadges: { comingSoon: 'Próximamente en', getIt: 'Disponible en', appStore: 'App Store', googlePlay: 'Google Play' },
     columns: { product: 'Producto', follow: 'Síguenos', legal: 'Legal', connect: 'Conectar' },
     productLinks: ['Funciones', 'Precio', 'Preguntas', 'Contacto', 'Guía', 'Blog'],
     legalLinks: ['Privacidad', 'Términos de uso', 'Cookies', 'Seguridad'],
