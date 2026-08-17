@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import PhoneMockup from './PhoneMockup'
 import WebMockup from './WebMockup'
 import TiltCard from './TiltCard'
+import StoreBadge from './StoreBadge'
 import { useLocale } from '../i18n/LocaleContext'
 
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
@@ -80,6 +81,21 @@ export default function Hero() {
             <motion.p variants={reduceMotion ? undefined : item} className="mt-4 text-xs font-medium text-gray-500">
               {t.trustBar}
             </motion.p>
+            <motion.div variants={reduceMotion ? undefined : item} className="mt-4 flex flex-wrap gap-3">
+              <StoreBadge
+                theme="light"
+                icon="🍎"
+                sublabel={dict.footer.storeBadges.comingSoon}
+                label={dict.footer.storeBadges.appStore}
+              />
+              <StoreBadge
+                theme="light"
+                icon="▶"
+                sublabel={dict.footer.storeBadges.getIt}
+                label={dict.footer.storeBadges.googlePlay}
+                href="https://play.google.com/store/apps/details?id=au.com.heyflat"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
