@@ -1,5 +1,6 @@
 import Seo from '../components/Seo'
 import Hero from '../components/Hero'
+import ProofStrip from '../components/ProofStrip'
 import ProblemSection from '../components/ProblemSection'
 import LanguagesStrip from '../components/LanguagesStrip'
 import FeaturesSection from '../components/FeaturesSection'
@@ -33,6 +34,7 @@ export default function LandingPage() {
       />
       <div className="pb-20 md:pb-0">
         <Hero />
+        <ProofStrip />
         <ProblemSection />
         <LanguagesStrip />
         <FeaturesSection />

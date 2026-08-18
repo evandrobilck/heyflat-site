@@ -6,8 +6,8 @@ import { useLocale, guidePath } from '../i18n/LocaleContext'
 const SIGNUP_URL = import.meta.env.VITE_APP_SIGNUP_URL
 
 // Real app screenshots, one per section, in the same order as the
-// sections arrays below (identical across locales — only the dict text
-// changes per language, the screenshots are shared).
+// sections arrays below. English has its own set (captured with the app UI
+// in English); pt/es still share the original PT screenshots.
 const SECTION_IMAGES = [
   'primeiros-passos',
   'contas',
@@ -102,7 +102,7 @@ export default function GuidePage() {
 
                     <div className="shrink-0 md:w-64">
                       <img
-                        src={`/guide/${SECTION_IMAGES[index]}.png`}
+                        src={`/guide/${locale === 'en' ? 'en/' : ''}${SECTION_IMAGES[index]}.png`}
                         alt={section.title}
                         loading="lazy"
                         className="mx-auto w-48 rounded-2xl border border-gray-200 shadow-md md:w-full"

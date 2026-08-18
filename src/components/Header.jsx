@@ -21,13 +21,13 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <a href={localeHome(locale)} className="flex items-center gap-2">
           <img src="/logo-purple.svg" alt="HeyFlat" className="h-10 w-auto md:h-11" />
         </a>
 
-        <nav className="hidden items-center gap-5 text-sm font-medium text-gray-600 md:flex">
+        <nav className="hidden items-center gap-5 text-sm font-medium whitespace-nowrap text-zinc-600 xl:flex">
           {NAV_LINKS.map(({ href: linkHref, label }) => (
             <a key={linkHref} href={linkHref} className="hover:text-brand-600">
               {label}
@@ -36,8 +36,8 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-1 md:gap-3">
-          <div className="flex items-center gap-2 rounded-lg border border-gray-200 py-1 pl-2 pr-1">
-            <span className="hidden text-xs font-medium text-gray-600 sm:inline">{LANG_LABEL[locale]}</span>
+          <div className="flex items-center gap-2 rounded-lg border border-zinc-200 py-1 pl-2 pr-1">
+            <span className="hidden text-xs font-medium text-zinc-600 sm:inline">{LANG_LABEL[locale]}</span>
             <div className="flex items-center gap-1">
               {LOCALES.map((code) => (
                 <a
@@ -55,7 +55,7 @@ export default function Header() {
           </div>
           <a
             href={LOGIN_URL}
-            className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:text-brand-600 md:px-4"
+            className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-700 hover:text-brand-600 md:px-4"
           >
             {dict.header.login}
           </a>
