@@ -1,3 +1,4 @@
+import { AppleLogo, GooglePlayLogo } from '@phosphor-icons/react'
 import { useLocale, localeHome, guidePath, blogIndexPath } from '../i18n/LocaleContext'
 import StoreBadge from './StoreBadge'
 
@@ -63,7 +64,7 @@ function FooterColumn({ title, links }) {
       <ul className="mt-4 space-y-2.5">
         {links.map(({ href, label }) => (
           <li key={label}>
-            <a href={href} className="text-sm text-gray-400 hover:text-white">
+            <a href={href} className="text-sm text-brand-100 hover:text-white">
               {label}
             </a>
           </li>
@@ -98,18 +99,18 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-brand-600 text-brand-50">
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-8">
-        <div className="flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-12 md:flex-row md:items-center">
+        <div className="flex flex-col items-start justify-between gap-8 border-b border-white/15 pb-12 md:flex-row md:items-center">
           <div>
             <img src="/logo-white.svg" alt="HeyFlat" className="h-7 w-auto" />
-            <p className="mt-3 max-w-xs text-sm text-gray-400">{t.tagline}</p>
+            <p className="mt-3 max-w-xs text-sm text-brand-100">{t.tagline}</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <StoreBadge icon="🍎" sublabel={t.storeBadges.comingSoon} label={t.storeBadges.appStore} />
+            <StoreBadge icon={AppleLogo} sublabel={t.storeBadges.comingSoon} label={t.storeBadges.appStore} />
             <StoreBadge
-              icon="▶"
+              icon={GooglePlayLogo}
               sublabel={t.storeBadges.getIt}
               label={t.storeBadges.googlePlay}
               href="https://play.google.com/store/apps/details?id=au.com.heyflat"
@@ -127,7 +128,7 @@ export default function Footer() {
                   key={label}
                   href={socialHref}
                   aria-label={label}
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-brand-50 hover:bg-white/20 hover:text-white"
                 >
                   <SocialIcon icon={icon} />
                 </a>
@@ -138,7 +139,7 @@ export default function Footer() {
           <FooterColumn title={t.columns.connect} links={connectLinks} />
         </div>
 
-        <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-gray-400">
+        <p className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-brand-100">
           {t.copyright.replace('{year}', new Date().getFullYear())}
         </p>
       </div>

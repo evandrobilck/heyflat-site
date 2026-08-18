@@ -33,20 +33,20 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contato" className="bg-gradient-to-br from-brand-600 to-brand-800 py-16 md:py-24">
+    <section id="contato" className="py-16 md:py-24">
       <div className="mx-auto max-w-xl px-4 text-center md:px-8">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">{t.title}</h2>
-          <p className="mt-3 text-brand-100">{t.subtitle}</p>
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">{t.title}</h2>
+          <p className="mt-3 text-zinc-600">{t.subtitle}</p>
         </Reveal>
 
         <Reveal
           as="form"
           delay={0.15}
           onSubmit={handleSubmit}
-          className="mt-8 space-y-4 rounded-2xl bg-white p-8 text-left shadow-xl">
+          className="mt-8 space-y-4 rounded-2xl border border-zinc-200 bg-white p-8 text-left shadow-sm">
           <div>
-            <label htmlFor="contact-name" className="text-xs font-medium text-gray-600">
+            <label htmlFor="contact-name" className="text-xs font-medium text-zinc-600">
               {t.labels.name}
             </label>
             <input
@@ -55,11 +55,11 @@ export default function ContactSection() {
               required
               value={name}
               onChange={(event) => setName(event.target.value)}
-              className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
+              className="mt-1 w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
             />
           </div>
           <div>
-            <label htmlFor="contact-email" className="text-xs font-medium text-gray-600">
+            <label htmlFor="contact-email" className="text-xs font-medium text-zinc-600">
               {t.labels.email}
             </label>
             <input
@@ -68,11 +68,11 @@ export default function ContactSection() {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
+              className="mt-1 w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
             />
           </div>
           <div>
-            <label htmlFor="contact-message" className="text-xs font-medium text-gray-600">
+            <label htmlFor="contact-message" className="text-xs font-medium text-zinc-600">
               {t.labels.message}
             </label>
             <textarea
@@ -81,7 +81,7 @@ export default function ContactSection() {
               rows={4}
               value={message}
               onChange={(event) => setMessage(event.target.value)}
-              className="mt-1 w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
+              className="mt-1 w-full resize-none rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-brand-500"
             />
           </div>
 
@@ -100,7 +100,7 @@ export default function ContactSection() {
             <p className="text-center text-xs font-medium text-red-600">{t.error.replace('{email}', CONTACT_EMAIL)}</p>
           )}
           {status !== 'success' && status !== 'error' && (
-            <p className="text-center text-xs text-gray-400">{t.note.replace('{email}', CONTACT_EMAIL)}</p>
+            <p className="text-center text-xs text-zinc-400">{t.note.replace('{email}', CONTACT_EMAIL)}</p>
           )}
         </Reveal>
       </div>

@@ -28,15 +28,6 @@
   --color-brand-900: #3a0782;
 
   --animate-marquee: marquee var(--marquee-duration, 32s) linear infinite;
-  --animate-drift: drift 18s ease-in-out infinite;
-  --animate-drift-slow: drift 24s ease-in-out infinite reverse;
-  --animate-shimmer: shimmer 5s linear infinite;
-}
-
-@keyframes shimmer {
-  to {
-    background-position: -200% center;
-  }
 }
 
 @keyframes marquee {
@@ -46,22 +37,6 @@
   to {
     transform: translateX(-50%);
   }
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(3%, -4%) scale(1.05);
-  }
-}
-
-html,
-body,
-#root {
-  height: 100%;
 }
 
 html {
@@ -74,4 +49,14 @@ body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* Faint blueprint-style grid, used behind the hero instead of a color glow.
+   Two line layers (fine + coarse) so it reads as a technical drawing, not noise. */
+.bg-technical-grid {
+  background-image:
+    linear-gradient(to right, rgb(110 11 252 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(110 11 252 / 0.05) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }

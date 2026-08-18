@@ -1,11 +1,8 @@
 import Reveal from './Reveal'
+import FlagIcon from './FlagIcon'
 import { useLocale, localeHome, LOCALES } from '../i18n/LocaleContext'
 
-const LANG_META = {
-  pt: { flag: '🇧🇷', label: 'Português' },
-  en: { flag: '🇺🇸', label: 'English' },
-  es: { flag: '🇪🇸', label: 'Español' },
-}
+const LANG_LABEL = { pt: 'Português', en: 'English', es: 'Español' }
 
 export default function LanguagesStrip() {
   const { locale, dict } = useLocale()
@@ -14,11 +11,10 @@ export default function LanguagesStrip() {
     <section className="py-10">
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
         <Reveal>
-          <p className="text-sm font-medium text-gray-500">{dict.languagesStrip.text}</p>
+          <p className="text-sm font-medium text-zinc-500">{dict.languagesStrip.text}</p>
         </Reveal>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
           {LOCALES.map((code, index) => {
-            const { flag, label } = LANG_META[code]
             const isActive = code === locale
             return (
               <Reveal key={code} delay={0.08 * index} y={12}>
@@ -27,11 +23,11 @@ export default function LanguagesStrip() {
                   className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium shadow-sm ${
                     isActive
                       ? 'border-brand-300 bg-brand-50 text-brand-700'
-                      : 'border-gray-200 bg-white text-gray-700 hover:border-brand-200'
+                      : 'border-zinc-200 bg-white text-zinc-700 hover:border-brand-200'
                   }`}
                 >
-                  <span className="text-lg leading-none">{flag}</span>
-                  {label}
+                  <FlagIcon code={code} className="h-4 w-5" />
+                  {LANG_LABEL[code]}
                 </a>
               </Reveal>
             )
